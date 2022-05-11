@@ -709,7 +709,7 @@ print(x, na.print = "")
 # Decision Making
 # ---------------------------
 
-# is statement
+# if statement
 
 a <- 76
 b <- 67
@@ -796,3 +796,92 @@ z <- switch("GfG",
   "GfG3" = "Geeks2"
 )
 print(z)
+
+# if statement 
+
+a <- 5
+
+if(a > 0)
+{
+  print("Positine Number")
+}  
+
+# if statement with optional argument
+
+x <- 12
+
+if (x > 20)
+{
+  print("12 is less than 20")
+}
+print("Hello World")
+
+# python if else statemen
+
+a <- -5
+if(a > 0)
+{
+  print("Positive Number")
+}else{
+  print("-ve number")
+}
+
+# if else statement
+
+if(x > 10)
+{
+  print(paste(x, "is greater than 10"))
+} else
+{
+  print(paste(x, "is less than 10"))
+}  
+
+# nested if else statement in r
+
+var1 <- 6
+var2 <- 5
+var3 <- 4
+
+if(var1 > 10 || var2 < 5){
+print("condition1")
+}else{
+  if(var1 <4 ){
+    print("condition2")
+}else{
+    if(var2>10){
+    print("condition3")
+    }
+    else{
+    print("condition4")
+    }
+}  
+}
+
+# switch case in R
+
+val <- switch(
+  4, 
+  "jim1",
+  "jim2",
+  "jim3",
+  "jim4",
+  "jim5",
+  "jim6"
+)
+print(val)
+
+# switch case in R exaple 2
+
+val1 = 6
+val2 = 7
+val3 = "s"
+result = switch(
+    val3,
+    "a"= cat("Addition =", val1 + val2),
+    "d"= cat("Subtraction =", val1 - val2),
+    "r"= cat("Division =", val1 / val2),
+    "s"= cat("Multiplication =", val1 * val2),
+    "m"= cat("Modulus =", val1 %% val2),
+    "p"= cat("Power =", val1 ^ val2)
+)
+print(result)
