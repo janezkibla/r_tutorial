@@ -885,3 +885,386 @@ result = switch(
     "p"= cat("Power =", val1 ^ val2)
 )
 print(result)
+
+# Control flow
+# ------------
+
+# if condition
+
+x <- 100
+
+if(x > 10){
+print(paste(x, "is greater than 10"))
+}
+
+# if else condition
+
+x <- 5
+
+if(x > 10){
+  print(paste(x, "is greater than 10"))
+}else{
+  print(paste(x, "is less than 10"))
+}
+
+# for loop
+
+x <- letters[4:10]
+
+for(i in x){
+  print(i)
+}
+
+# nasted loops
+
+m <- matrix(2:15, 2)
+
+for (r in seq(nrow(m))) {
+  for (c in seq(ncol(m))) {
+    print(m[r, c])
+  }
+}
+
+# while loop
+
+x = 1
+
+while(x <= 5){
+  print(x)
+  x = x + 1
+}
+
+# repeat loop and break statement
+
+x = 1
+
+repeat{
+  print(x)
+  x = x + 1
+  if(x > 5){
+    break
+  }
+}
+
+# return statement
+
+func <- function(x){
+  if(x > 0){
+    return("Positive")
+  }else if(x < 0){
+    return("Negation")
+  }else{
+    return("Zero")
+  }
+} 
+
+# next statement
+
+x <- 1:10
+
+for(i in x){
+  if(i%%2 != 0){
+    next
+  }
+  print(i)
+}
+
+# for loop syntay
+
+for (val in 1: 5)
+{
+  
+  print(val)
+}  
+
+# example 2
+
+week < - c('pon',
+           'tor',
+           'sre',
+           'cet',
+           'pet',
+           'sob',
+           'ned')
+
+for (day in week)
+{
+  
+  print(day)
+}  
+
+# while loop in R
+
+val = 1
+while (val <= 5)
+{
+  print(val)
+  val1 = val + 1
+}
+
+# r repeat loop syntax
+
+val = 1
+
+repeat
+{
+  print(val)
+  val = val + 1
+  
+  if(val > 5)
+  {
+    break
+  }
+}  
+
+# jump statements in loop
+
+for (val in 1: 5)
+{
+  if (val == 3)
+  {
+    
+    break
+  }
+  
+  print(val)
+}  
+
+# next statement
+
+for (val in 1: 5)
+{
+  if (val == 3)
+  {
+    
+    next
+  }
+  
+  print(val)
+}
+
+# for loop i R syntax
+
+for (i in 1: 4)
+{
+  print(i ^ 2)
+}  
+
+# example 2
+
+for (i in c(-8, 9, 11, 45))
+{
+  print(i)
+}  
+
+# nested for-loop in R
+
+for (i in 1:3)
+{
+  for(j in 1:i)
+  {
+    print(i * j)
+  }
+}  
+
+# jump statement in R
+
+for (i in c(3, 6, 23, 19, 0, 21))
+{
+    if (i == 0)
+    {
+        break
+    }
+  print(i)
+}
+print("Output loop")
+
+# nex statement
+
+for (i in c(3, 6, 23, 19, 0, 21))
+{
+    if (i == 0)
+    {
+      next
+    }
+    print(i)
+}
+print("Outside loop")
+
+# while loop syntax
+
+result <- c("Hello bruh")
+i <- 1
+
+while (i < 6){
+  print(result)
+  i = i + 1
+}
+
+# example 2
+
+result <- 1
+i <- 1
+
+while (i < 6) {
+  print(result)
+  
+  i = i + 1
+  result = result + 1
+}
+
+# while loop break
+
+result <- c("Hello bruh")
+i <- 1
+while (i < 6){
+  print(result)
+  if( i == 3){
+      break}
+  i = i + 1
+}  
+
+# repeat loop
+
+result <- c("Hello bruh")
+i <- 1
+
+repeat {
+  print(result)
+  
+  i <- i + 1
+  
+  if(i >5) {
+    break
+  }
+}
+
+# example 2
+
+result <- 1
+i <- 1
+
+repeat{
+  print(result)
+  
+  i <- i + 1
+  result = result + 1
+  
+  if(i > 5) {
+    break
+  }
+}  
+
+# goto statement in R
+
+a <- 4
+if ((a %% 2) == 0)
+{ 
+  print("even") 
+} else 
+{
+  print("odd")
+}
+
+# without goto
+
+a <- 16
+b <- a/2
+flag <- 0
+i <- 2
+repeat
+{
+  if ((a %% i)==0)
+  {
+    flag <- 1
+    break
+  }
+}
+
+if (flag == 1)
+{
+  print("composite")
+}else
+{
+  print("prime")
+}  
+
+# Breaking and Next statement in R
+
+no <- 1:10
+
+for (val in no)
+{
+    if (val == 5)
+    {
+      print(paste("Coming out from for loop Where i = ", val))
+      break
+    }
+    print(paste("Values are: ", val))
+}
+
+# example 2
+
+a<-1
+while (a < 10)
+{
+    print(a)
+    if(a==5)
+        break
+    a = a + 1
+}    
+
+# next statement for loop
+
+no <- 1:10
+
+for (val in no)
+{
+    if (val == 6)
+    {
+        print(paste("Skipping for loop Where i = ", val))
+        next
+    }
+    print(paste("Values are: ", val))
+}    
+
+# example 2 while loop
+
+x <- 1
+while(x < 5)
+{
+    x <- x + 1;
+    if (x == 3)
+        next;
+    print(x);
+}    
+
+# next statement
+
+val <- 6:11
+
+for (i in val)
+{
+    if (i == 8)
+    {
+      next
+    }
+    print(i)
+}    
+
+# next in the repeat lop
+
+i = 0
+
+repeat
+{
+  if(i == 10)
+    break
+  
+  if(i == 5)
+  {
+    next
+  }
+    print(i)
+    i = i + 1
+}    
