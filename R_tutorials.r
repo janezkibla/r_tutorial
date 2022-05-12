@@ -1239,3 +1239,308 @@ repeat{
   print(i)
   i <- i + 1
 }
+
+
+# Functions
+# ------------------
+
+# built in functions in R
+
+# finds the sum of number 4 to
+print(sum(4:6))
+# finds max of number 4 and 6
+print(max(4:6))
+# finds min of number 4 and 6
+print(min(4:6))
+
+# user defined functions in R
+
+evenOdd <- function(x) {
+  if (x %% 2 == 0) {
+    return("even")
+  } else {
+    return("odd")
+  }
+}
+
+print(evenOdd(4))
+print(evenOdd(3))
+
+# single input single output
+
+areaOfCircle <- function(radius) {
+  area <- pi * radius^2
+  return(area)
+}
+
+print(areaOfCircle(2))
+
+# multiple input multiple output
+
+Rectangle <- function(length, width) {
+  area <- length * width
+  perimeter <- 2 * (length + width)
+
+  result <- list("Area" = area, "Perimeter" = perimeter)
+  return(result)
+}
+
+resultList <- Rectangle(2, 3)
+print(resultList["Area"])
+print(resultList["Perimeter"])
+
+# inlinefunction in r
+
+f <- function(x) x^2 * 4 + x / 3
+
+print(f(4))
+print(f(-2))
+print(0)
+
+# passing arguments of function in r
+
+Rectangle <- function(length = 5, width = 4) {
+  area <- length * width
+  return(area)
+}
+
+print(Rectangle(2, 3))
+
+print(Rectangle(width = 8, length = 4))
+
+print(Rectangle())
+
+# lazy evaluations of function in r
+
+Cylinder <- function(diameter, length, radius) {
+  volume <- pi * diameter^2 * length / 4
+  return(volume)
+}
+
+print(Cylinder(5, 10))
+
+# function arguments in R
+
+divisbleBy5 <- function(n) {
+  if (n %% 5 == 0) {
+    return("number is divisible by 5")
+  } else {
+    return("number is not divisible by 5")
+  }
+}
+
+divisbleBy5(100)
+divisbleBy5(4)
+divisbleBy5(20.0)
+
+# adding multiple arguments in R
+
+divisible <- function(a, b) {
+  if (a %% b == 0) {
+    return(paste(a, "is divisible by", b))
+  } else {
+    return(paste(a, "is not divisible by", b))
+  }
+}
+
+divisible(7, 3)
+divisible(36, 6)
+divisible(9, 2)
+
+# adding dedault value in R
+
+divisible <- function(a, b = 3) {
+  if (a %% b == 0) {
+    return(paste(a, "is divisible by", b))
+  } else {
+    retuen(paste(a, "is not divisible by", b))
+  }
+}
+
+divisible(10, 5)
+divisible(12)
+
+# dots argument
+
+fun <- function(n, ...) {
+  1 <- list(n, ...)
+  paste(1, collapse = " ")
+}
+
+fun(5, 1L, 6i, TREU, "joe", "mama")
+
+# function as argument
+
+fun <- function(x, fun2) {
+  return(fun2(x))
+}
+
+fun(c(1:10), sum)
+fun(rnorm(50), mean)
+
+# calling a function
+
+cube <- function() {
+  for (i in 1:10)
+  {
+    print(i^3)
+  }
+}
+
+cube()
+
+# calling a function with argument
+
+factorial <- function(n) {
+  if (n == 0) {
+    return(1)
+  } else {
+    return(n * factorial(n - 2))
+  }
+}
+
+factorial(7)
+
+# primitive functions
+
+typeof(sum)
+typeof("[")
+
+# infix functions
+
+"%Greater%" <- function(a, b) {
+  if (a > b) {
+    print(a)
+  } else if (b > a) {
+    print(b)
+  } else {
+    print("equal")
+  }
+}
+5 %Greater% 7
+2300 %Greater% 67
+
+# replace function
+
+"replace<-" <- function(x, value) {
+  x[1] <- value
+  x
+}
+x <- rep.int(5, 7)
+replace(x) <- 0L
+print(x)
+
+# factorial using recursion in r
+
+rec_fac <- function(x) {
+  if (x == 0 || x == 1) {
+    return(1)
+  } else {
+    return(x * rec_fac(x - 1))
+  }
+}
+
+# sum of series using recursion
+
+sum_series <- function(vec) {
+  if (length(vec) <= 1) {
+    return(vec^2)
+  } else {
+    return(vec[1]^2 + sum_series(vec[-1]))
+  }
+}
+series <- c(1:10)
+sum_series(series)
+
+# conversion functions in R
+
+x <- c("1", "2", "3")
+
+print(x)
+
+print(typeof(x))
+
+y <- as.numeric(x)
+
+print(typeof(y))
+
+# as.integer
+
+x <- c(2.3, 5.6, 55.6)
+
+print(x)
+
+print(typeof(x))
+
+y <- as.integer(x)
+
+print(y)
+
+print(typeof(y))
+
+# as.cahrecter
+
+x <- c(1.3, 5.6, 55.6)
+
+print(x)
+
+print(typeof(x))
+
+y <- as.character(x)
+
+print(y)
+
+print(typeof(y))
+
+# as.logical
+
+x <- 3
+y <- 8
+
+result <- as.logical(x > y)
+
+print(result)
+
+# as.date
+
+dates <- c(
+  "02/27/92", "02/27/92",
+  "01/14/92", "02/28/92",
+  "02/01/92"
+)
+result <- as.Date(dates, "%m/%d/%y")
+
+print(result)
+
+# as.date.frame
+
+x <- list(
+  c("a", "b", "c"),
+  c("e", "f", "g"), c("h", "i", "j")
+)
+
+print(x)
+
+y <- as.data.frame(x)
+
+print(y)
+
+# as.vector
+
+x <- c(a = 1, b = 2)
+
+print(x)
+
+y <- as.vector(x)
+
+print(y)
+
+# as.matrix
+
+library(data.table)
+x <- data.table(A = letters[1:5], X = 1:5, Y = 6:10)
+
+print(x)
+z <- as.matrix(x)
+
+print(z)
