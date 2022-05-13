@@ -1544,3 +1544,284 @@ print(x)
 z <- as.matrix(x)
 
 print(z)
+
+
+# Data Structure
+# -----------------
+
+# Creation of string
+
+str1 <- "OK1"
+cat("String 1 is : ", str1)
+
+str2 <- "OK2"
+cat("String 2 is : ", str2)
+
+str3 <- "This is 'acceptable and ' in R"
+cat("String 3 is : ", str3)
+
+str4 <- 'Hi", Wondertring "if this work"'
+cat("String 4 is : ", str4)
+
+# using str_length
+
+library(stringr)
+str_length("hello")
+
+# using nchar function
+
+nchar("hel'lo")
+
+# using substr function
+
+substr("Lear Code Tech", 1, 1)
+
+# using substring function
+
+str <- "Learn Code"
+
+len <- nchar(str)
+
+print(substring(str, len, len))
+
+print(substring(str, len + 1, len + 1))
+
+# Case conversion
+
+str <- "Hi LeArn CodingNG"
+print(toupper(str))
+print(tolower(str))
+print(casefold(str, upper = TRUE))
+
+# updating string
+
+srt <- c("program")
+substring(str, 2, 2) <- "%"
+print(str)
+
+# using built in type
+
+a <- "hello joe"
+print(a)
+
+# string manipulation
+
+str1 <- "hello"
+str2 <- "how are you"
+print(paste(str1, str2, sep = " ", collapse = "NULL"))
+
+# formatting numbers and string-format function
+
+result < -format(69.1456789, digits = 9)
+print(result)
+
+result < -format(c(3, 132.84521),
+  scientific = TRUE
+)
+print(result)
+
+result < -format(96.47, nsma11 = 5)
+print(result)
+
+result < -format(8)
+print(result)
+
+result < -format(67.7, width = 6)
+print(result)
+
+result < -format("Hello",
+  width = 8,
+  justify = "1"
+)
+print(result)
+
+# counting the number of charecters is the string nchar
+
+a <- nchar("hello jim")
+print(a)
+
+# changing the case of the string-toupper and tolower and function
+
+a <- toupper("hello jerald")
+print(a)
+
+b <- tolower("HELLO JERALD")
+print(b)
+
+# detect the string
+
+library(tidyverse)
+str_detect(string, "clint")
+
+# locate the string
+
+library(tidyverse)
+str_locate(string, "joe")
+
+# extract the string
+
+library(tidyverse)
+str_extract(string, "for")
+
+# replace the string
+
+library(tidyverse)
+str_replace(string, "toJoemama", "mama")
+
+# using regex and external module
+
+string <- c("Welcometojimshouse!")
+str_extract_all(string, "G..k")
+
+# select the string \\D
+
+str_extract_all(string, "W\\D\\Dcome")
+
+# using grap
+
+str <- c("Hi", "hello", "hi", "hey")
+grep("hey", str)
+
+# paste function
+
+str <- paste("Learn", "Code")
+print(str)
+
+# cat function
+
+str <- cat("learn", "code", "tech", sep = ":")
+print(str)
+
+# lenght function
+
+print(length(c("Learn to", "Code")))
+
+# nchar function
+
+print(nchar(c("learn", "Code")))
+
+# conversion to upper case
+
+print(toupper(c("Learn Code", "hi")))
+
+# conversion to lower case
+
+print(tolower(c("Learn Code", "hi")))
+
+# casefold function
+
+print(casefold(c("Learn Code", "hi")))
+
+# chapter replacement
+
+chartr("a", "A", "An honest man gave that")
+
+# splitting the string
+
+strsplit("Learn Code Teach !", " ")
+
+# working with substring
+
+substr("Learn Code tech", 1, 4)
+
+# replacing the third chapter of every string with % sign
+
+str <- c("program", "with", "new", "language")
+substr(str, 3, 3) <- c("%", "@")
+print(str)
+
+# paste method
+
+string1 <- "Geeks"
+string2 <- "Geeks"
+
+answer <- paste(string1, string2, sep = " For ")
+
+print(answer)
+
+# grep function
+
+str <- c("Hello", "hello", "hi", "hey")
+grep("he", str)
+
+# finding and removing string
+
+library(stringr)
+x <- c("apple", "pear", "banana")
+str_remove(x, "[aeiou")
+
+# using substr
+
+gfg < -"Geeks For Geeks"
+
+answer < -substr(gtg, 0, 5)
+
+print(answer)
+
+# using str_detect method
+
+library(stringr)
+
+x <- c("Geeks", "Hello", "Welcome", "For")
+
+pat <- "Geeks"
+
+str_detect(x, pat)
+
+# using grep method
+
+str <- c("Hello", "hello", "hi", "hey")
+grep("he", str)
+
+# length of string using nchar
+
+gtg < -"Geeks For Geeks"
+
+answer < -nchar(gtg)
+
+print(answer)
+
+# use nchar
+
+v1 <- c("keeks", "2", "hello", 57)
+
+typeof(v1)
+
+nchar(v1)
+
+# append method
+
+x <- rep(1:5)
+gfg <- append(x, 10)
+print(gfg)
+
+# toupper method
+
+gfg <- "Geeks For Geeks"
+
+answer <- toupper(gfg)
+
+print(answer)
+
+# tolower method
+
+gfg <- "GeEks FoR GeeKs"
+
+answer <- tolower(gfg)
+
+print(answer)
+
+# using strsplit
+
+gtg < -"Geeks For Geeks"
+
+answer < -strsplit(gfg, " ")
+
+print(answer)
+
+# sprint function
+
+x1 <- "Welcome"
+x2 <- "GeeksforGeeks"
+
+sprintf("% s to % s", x1, x2)
