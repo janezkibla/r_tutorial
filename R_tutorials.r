@@ -1241,6 +1241,276 @@ repeat{
 }
 
 
+# Vector
+# --------------
+
+
+# numeric vector
+
+v1 <- c(4, 5, 6, 7)
+typeof(v1)
+
+v2 <- c(1L, 4L , 2L, 5L)
+typeof(v2)
+
+# charecter vector
+
+v1 <- c('geeks', '2', 'hello')
+typeof(v1)
+
+# logical vector
+
+v1 <- c(TRUE, FALSE, TRUE, NA)
+typeof(v1)
+
+# creating a vector
+
+X <- c(61, 4, 21, 67, 89, 2)
+cat('using c function', X, '\n')
+
+Y <- seq(1, 10, length.out = 5)
+cat('using seq() function', Y, '\n')
+
+Z <- 2:7
+cat('using colon', Z)
+
+# accessing vector elements
+
+X <- c(2, 5, 18, 1, 12)
+cat('Using Subscript operator', X[2], '\n')
+
+Y <- c(4, 8, 2, 1, 17)
+cat('Using combine() function', Y[c(4, 1)], '\n')
+
+Y <- c(4, 8, 2, 1, 17)
+cat('using combine() function', Y[c(4, 1)], '\n')
+
+Z <-c(5, 2, 1, 4, 4, 3)
+cat('using logical indexing', Z[Z>4])
+
+# modifying vector
+
+X <- c(2, 7, 9, 7, 8, 2)
+
+X[3] <- 1
+X[2] <-9
+cat('subscript operator', X, '\n')
+
+X[X>5] <- 0
+cat('logical indexing', X, '\n')
+
+X <- X[c(3, 2, 1)]
+cat('combine() function', X)
+
+# delete a vector
+
+M <- c(8, 10, 2, 5)
+
+M <- NULL
+cat('output vector', M)
+
+# sorting elements of a vector
+
+X <- c(8, 2, 7, 1, 11, 2)
+
+A <- sort(X)
+cat('ascending order', A, '\n')
+
+B <- sort(X, decreasing = TRUE)
+cat('descending order', B)
+
+# append operation on vectors in r 
+
+x <- 1:5
+n <- 6:10
+
+y <- c(x, n)
+
+print(y)
+
+# append operation using append
+
+x <- 1:5
+
+x <- append(x, 6:10)
+
+print(x)
+
+# example 2
+
+x <- 1:5
+y <- letters[1:5]
+
+x <- append(x, values = y)
+
+print(x)
+
+# dot product of vector in r
+
+library(geometry)
+
+a = 5
+b = 7
+
+print(dot(a, b, d = TRUE))
+
+# example 2
+
+library(geometry)
+
+a = 3 + 1i
+b = 7 + 6i
+
+print(dot(a, b, d = TRUE))
+
+# atomic vector
+
+v1 <- c(1L, 4L, 2L, 5L)
+
+print(v1)
+
+print(typeof(v1))
+
+# double vector
+
+v1 <- c(4, 5, 6, 7)
+
+print(v1)
+
+print(typeof(v1))
+
+# logical vector
+
+v1 <- c(TRUE, FALSE, TRUE, NA)
+
+print(v1)
+
+print(typeof(v1))
+
+# charecter vector
+
+v1 <- c('geeks', '2', 'hello')
+
+print(v1)
+
+print(typeof(v1))
+
+# complex vector
+
+v1 <- c(1+2i, 3i, 4-5i, -12+6i)
+
+print(v1)
+
+print(typeof(v1))
+
+# raw vector
+
+print(raw(3))
+
+print(typeof(raw(3)))
+
+# recursive vector
+
+l1 <- list(1, 2, 3)
+
+print(l1)
+
+print(typeof(l1))
+
+# assigning of vector
+
+V = c(1, 2, 4, 6, 7)
+
+print(V)
+
+print(typeof(V))
+
+# assigning a vector using ":"
+
+V = 1:10
+
+print(V)
+
+# assigning vector with seq()
+
+V = seq(1, 3, by=0.2)
+
+print(V)
+
+# getting the length of the vector
+
+x <- c(6)
+y <- c(1, 2, 3, 4, 5)
+
+length(x)
+length(y)
+
+# getting the length of the matrix
+
+A = matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8 ,9),
+  nrow = 3,
+  ncol = 3, 
+  
+  byrow = TRUE
+)
+print(A)
+length(A)
+
+# getting the length of the dateframe
+
+print(BOD)
+length(BOD)
+
+# getting the length of the list
+
+empId = c(1, 2, 3, 4)
+
+empName = c("Debi", "Sandeep", "Subham", "Shiba")
+
+numberOfEmp = 4
+
+empList = list(empId, empName, numberOfEmp)
+
+print(empList)
+
+print(empList)
+print("Length of the list:")
+length(empList)
+
+# getting the length of the string
+
+string <- "Good Morning"
+
+length(string)
+
+length(unlist(strsplit(string, "")))
+
+# setting length of the object in r
+
+x <- c(3)
+y <- c(1, 2, 3, 4, 5)
+z <- c(1, 2, 3, 4, 5)
+
+length(x) <- 2
+length(y) <- 7
+length(z) <- 3
+
+x
+y
+z
+
+# seq function in r
+
+vec1 <- seq(1, 10, by = 2)
+vec2 <- seq(1, 10, length.out = 7)
+
+print(vec1)
+print(vec2)
+
+# example 2
+
+
 # Functions
 # ------------------
 
@@ -1825,3 +2095,353 @@ x1 <- "Welcome"
 x2 <- "GeeksforGeeks"
 
 sprintf("% s to % s", x1, x2)
+
+
+# Vector
+# --------------
+
+
+# numeric vector
+
+v1 <- c(4, 5, 6, 7)
+typeof(v1)
+
+v2 <- c(1L, 4L , 2L, 5L)
+typeof(v2)
+
+# charecter vector
+
+v1 <- c('geeks', '2', 'hello')
+typeof(v1)
+
+# logical vector
+
+v1 <- c(TRUE, FALSE, TRUE, NA)
+typeof(v1)
+
+# creating a vector
+
+X <- c(61, 4, 21, 67, 89, 2)
+cat('using c function', X, '\n')
+
+Y <- seq(1, 10, length.out = 5)
+cat('using seq() function', Y, '\n')
+
+Z <- 2:7
+cat('using colon', Z)
+
+# accessing vector elements
+
+X <- c(2, 5, 18, 1, 12)
+cat('Using Subscript operator', X[2], '\n')
+
+Y <- c(4, 8, 2, 1, 17)
+cat('Using combine() function', Y[c(4, 1)], '\n')
+
+Y <- c(4, 8, 2, 1, 17)
+cat('using combine() function', Y[c(4, 1)], '\n')
+
+Z <-c(5, 2, 1, 4, 4, 3)
+cat('using logical indexing', Z[Z>4])
+
+# modifying vector
+
+X <- c(2, 7, 9, 7, 8, 2)
+
+X[3] <- 1
+X[2] <-9
+cat('subscript operator', X, '\n')
+
+X[X>5] <- 0
+cat('logical indexing', X, '\n')
+
+X <- X[c(3, 2, 1)]
+cat('combine() function', X)
+
+# delete a vector
+
+M <- c(8, 10, 2, 5)
+
+M <- NULL
+cat('output vector', M)
+
+# sorting elements of a vector
+
+X <- c(8, 2, 7, 1, 11, 2)
+
+A <- sort(X)
+cat('ascending order', A, '\n')
+
+B <- sort(X, decreasing = TRUE)
+cat('descending order', B)
+
+# append operation on vectors in r 
+
+x <- 1:5
+n <- 6:10
+
+y <- c(x, n)
+
+print(y)
+
+# append operation using append
+
+x <- 1:5
+
+x <- append(x, 6:10)
+
+print(x)
+
+# example 2
+
+x <- 1:5
+y <- letters[1:5]
+
+x <- append(x, values = y)
+
+print(x)
+
+# dot product of vector in r
+
+library(geometry)
+
+a = 5
+b = 7
+
+print(dot(a, b, d = TRUE))
+
+# example 2
+
+library(geometry)
+
+a = 3 + 1i
+b = 7 + 6i
+
+print(dot(a, b, d = TRUE))
+
+# atomic vector
+
+v1 <- c(1L, 4L, 2L, 5L)
+
+print(v1)
+
+print(typeof(v1))
+
+# double vector
+
+v1 <- c(4, 5, 6, 7)
+
+print(v1)
+
+print(typeof(v1))
+
+# logical vector
+
+v1 <- c(TRUE, FALSE, TRUE, NA)
+
+print(v1)
+
+print(typeof(v1))
+
+# charecter vector
+
+v1 <- c('geeks', '2', 'hello')
+
+print(v1)
+
+print(typeof(v1))
+
+# complex vector
+
+v1 <- c(1+2i, 3i, 4-5i, -12+6i)
+
+print(v1)
+
+print(typeof(v1))
+
+# raw vector
+
+print(raw(3))
+
+print(typeof(raw(3)))
+
+# recursive vector
+
+l1 <- list(1, 2, 3)
+
+print(l1)
+
+print(typeof(l1))
+
+# assigning of vector
+
+V = c(1, 2, 4, 6, 7)
+
+print(V)
+
+print(typeof(V))
+
+# assigning a vector using ":"
+
+V = 1:10
+
+print(V)
+
+# assigning vector with seq()
+
+V = seq(1, 3, by=0.2)
+
+print(V)
+
+# getting the length of the vector
+
+x <- c(6)
+y <- c(1, 2, 3, 4, 5)
+
+length(x)
+length(y)
+
+# getting the length of the matrix
+
+A = matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8 ,9),
+  nrow = 3,
+  ncol = 3, 
+  
+  byrow = TRUE
+)
+print(A)
+length(A)
+
+# getting the length of the dateframe
+
+print(BOD)
+length(BOD)
+
+# getting the length of the list
+
+empId = c(1, 2, 3, 4)
+
+empName = c("Debi", "Sandeep", "Subham", "Shiba")
+
+numberOfEmp = 4
+
+empList = list(empId, empName, numberOfEmp)
+
+print(empList)
+
+print(empList)
+print("Length of the list:")
+length(empList)
+
+# getting the length of the string
+
+string <- "Good Morning"
+
+length(string)
+
+length(unlist(strsplit(string, "")))
+
+# setting length of the object in r
+
+x <- c(3)
+y <- c(1, 2, 3, 4, 5)
+z <- c(1, 2, 3, 4, 5)
+
+length(x) <- 2
+length(y) <- 7
+length(z) <- 3
+
+x
+y
+z
+
+# seq function in r
+
+vec1 <- seq(1, 10, by = 2)
+vec2 <- seq(1, 10, length.out = 7)
+
+print(vec1)
+print(vec2)
+
+# example 2
+
+vec1 <- seq(10, 1, by = -2)
+vec2 <- seq(10, 1, length.out = 4)
+
+print(vec1)
+print(vec2)
+
+# range()
+
+x <- c(8, 2, 5, 4, 9, 6, 54, 18)
+range(x)
+
+# using range() function in r programming with NA
+
+x <- c(8, 2, Inf, 5, 4, NA, 9, 54, 18)
+range(x)
+
+range(x, na.rm = TRUE)
+
+range(x, na.rn = TRUE, finite = TRUE)
+
+# string formatting in r
+
+result1 <- format("GFG", width = 8,  justify = "l")
+
+result2 <- format("GFG", width = 8,  justify = "c")
+
+result3 <- format("GFG", width = 8,  justify = "r")
+
+print(result1)
+print(result2)
+print(result3)
+
+# number format in r
+
+result1 < - format(12.3456789, digits=4)
+result2 < - format(12.3456789, digits=6)
+print(result1)
+print(result2)
+
+result3 < - format(12.3456789, nsmall=2)
+result3 < - format(12.3456789, nsmall=7)
+print(result3)
+print(result4)
+
+# replace()
+
+x <- c("GFG", "gfg", "Geeks")
+
+x 
+
+y <- replace(x, 2, "GeeksforGeeks")
+
+y
+
+# sort
+
+x <- c(7, 4, 3, 9, 1.2, -4, -5, -8, 6, NA)
+
+sort(x)
+
+# to strong() function in r
+
+x <- c("GFG", "Geeks", "GeeksforGeekaa")
+toString(x)
+
+# substring() function
+
+substring("Geeks", 2, 3)
+substring("Geeks", 1, 4)
+substring("GFG", 1,1)
+substring("gfg", 3, 3)
+
+# example 2
+
+x < - c("GFG", "gfg", "Geeks")
+
+substring(x, 2, 3)
+substring(x, 1, 3)
+substring(x, 2, 2)
