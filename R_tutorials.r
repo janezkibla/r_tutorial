@@ -1250,12 +1250,12 @@ repeat{
 v1 <- c(4, 5, 6, 7)
 typeof(v1)
 
-v2 <- c(1L, 4L , 2L, 5L)
+v2 <- c(1L, 4L, 2L, 5L)
 typeof(v2)
 
 # charecter vector
 
-v1 <- c('geeks', '2', 'hello')
+v1 <- c("geeks", "2", "hello")
 typeof(v1)
 
 # logical vector
@@ -1266,60 +1266,60 @@ typeof(v1)
 # creating a vector
 
 X <- c(61, 4, 21, 67, 89, 2)
-cat('using c function', X, '\n')
+cat("using c function", X, "\n")
 
 Y <- seq(1, 10, length.out = 5)
-cat('using seq() function', Y, '\n')
+cat("using seq() function", Y, "\n")
 
 Z <- 2:7
-cat('using colon', Z)
+cat("using colon", Z)
 
 # accessing vector elements
 
 X <- c(2, 5, 18, 1, 12)
-cat('Using Subscript operator', X[2], '\n')
+cat("Using Subscript operator", X[2], "\n")
 
 Y <- c(4, 8, 2, 1, 17)
-cat('Using combine() function', Y[c(4, 1)], '\n')
+cat("Using combine() function", Y[c(4, 1)], "\n")
 
 Y <- c(4, 8, 2, 1, 17)
-cat('using combine() function', Y[c(4, 1)], '\n')
+cat("using combine() function", Y[c(4, 1)], "\n")
 
-Z <-c(5, 2, 1, 4, 4, 3)
-cat('using logical indexing', Z[Z>4])
+Z <- c(5, 2, 1, 4, 4, 3)
+cat("using logical indexing", Z[Z > 4])
 
 # modifying vector
 
 X <- c(2, 7, 9, 7, 8, 2)
 
 X[3] <- 1
-X[2] <-9
-cat('subscript operator', X, '\n')
+X[2] <- 9
+cat("subscript operator", X, "\n")
 
-X[X>5] <- 0
-cat('logical indexing', X, '\n')
+X[X > 5] <- 0
+cat("logical indexing", X, "\n")
 
 X <- X[c(3, 2, 1)]
-cat('combine() function', X)
+cat("combine() function", X)
 
 # delete a vector
 
 M <- c(8, 10, 2, 5)
 
 M <- NULL
-cat('output vector', M)
+cat("output vector", M)
 
 # sorting elements of a vector
 
 X <- c(8, 2, 7, 1, 11, 2)
 
 A <- sort(X)
-cat('ascending order', A, '\n')
+cat("ascending order", A, "\n")
 
 B <- sort(X, decreasing = TRUE)
-cat('descending order', B)
+cat("descending order", B)
 
-# append operation on vectors in r 
+# append operation on vectors in r
 
 x <- 1:5
 n <- 6:10
@@ -1349,8 +1349,8 @@ print(x)
 
 library(geometry)
 
-a = 5
-b = 7
+a <- 5
+b <- 7
 
 print(dot(a, b, d = TRUE))
 
@@ -1358,8 +1358,8 @@ print(dot(a, b, d = TRUE))
 
 library(geometry)
 
-a = 3 + 1i
-b = 7 + 6i
+a <- 3 + 1i
+b <- 7 + 6i
 
 print(dot(a, b, d = TRUE))
 
@@ -1389,7 +1389,7 @@ print(typeof(v1))
 
 # charecter vector
 
-v1 <- c('geeks', '2', 'hello')
+v1 <- c("geeks", "2", "hello")
 
 print(v1)
 
@@ -1397,7 +1397,7 @@ print(typeof(v1))
 
 # complex vector
 
-v1 <- c(1+2i, 3i, 4-5i, -12+6i)
+v1 <- c(1 + 2i, 3i, 4 - 5i, -12 + 6i)
 
 print(v1)
 
@@ -1419,7 +1419,7 @@ print(typeof(l1))
 
 # assigning of vector
 
-V = c(1, 2, 4, 6, 7)
+V <- c(1, 2, 4, 6, 7)
 
 print(V)
 
@@ -1427,13 +1427,13 @@ print(typeof(V))
 
 # assigning a vector using ":"
 
-V = 1:10
+V <- 1:10
 
 print(V)
 
 # assigning vector with seq()
 
-V = seq(1, 3, by=0.2)
+V <- seq(1, 3, by = 0.2)
 
 print(V)
 
@@ -1447,11 +1447,10 @@ length(y)
 
 # getting the length of the matrix
 
-A = matrix(
-  c(1, 2, 3, 4, 5, 6, 7, 8 ,9),
+A <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
   nrow = 3,
-  ncol = 3, 
-  
+  ncol = 3,
   byrow = TRUE
 )
 print(A)
@@ -1464,13 +1463,13 @@ length(BOD)
 
 # getting the length of the list
 
-empId = c(1, 2, 3, 4)
+empId <- c(1, 2, 3, 4)
 
-empName = c("Debi", "Sandeep", "Subham", "Shiba")
+empName <- c("Debi", "Sandeep", "Subham", "Shiba")
 
-numberOfEmp = 4
+numberOfEmp <- 4
 
-empList = list(empId, empName, numberOfEmp)
+empList <- list(empId, empName, numberOfEmp)
 
 print(empList)
 
@@ -2106,12 +2105,12 @@ sprintf("% s to % s", x1, x2)
 v1 <- c(4, 5, 6, 7)
 typeof(v1)
 
-v2 <- c(1L, 4L , 2L, 5L)
+v2 <- c(1L, 4L, 2L, 5L)
 typeof(v2)
 
 # charecter vector
 
-v1 <- c('geeks', '2', 'hello')
+v1 <- c("geeks", "2", "hello")
 typeof(v1)
 
 # logical vector
@@ -2122,60 +2121,60 @@ typeof(v1)
 # creating a vector
 
 X <- c(61, 4, 21, 67, 89, 2)
-cat('using c function', X, '\n')
+cat("using c function", X, "\n")
 
 Y <- seq(1, 10, length.out = 5)
-cat('using seq() function', Y, '\n')
+cat("using seq() function", Y, "\n")
 
 Z <- 2:7
-cat('using colon', Z)
+cat("using colon", Z)
 
 # accessing vector elements
 
 X <- c(2, 5, 18, 1, 12)
-cat('Using Subscript operator', X[2], '\n')
+cat("Using Subscript operator", X[2], "\n")
 
 Y <- c(4, 8, 2, 1, 17)
-cat('Using combine() function', Y[c(4, 1)], '\n')
+cat("Using combine() function", Y[c(4, 1)], "\n")
 
 Y <- c(4, 8, 2, 1, 17)
-cat('using combine() function', Y[c(4, 1)], '\n')
+cat("using combine() function", Y[c(4, 1)], "\n")
 
-Z <-c(5, 2, 1, 4, 4, 3)
-cat('using logical indexing', Z[Z>4])
+Z <- c(5, 2, 1, 4, 4, 3)
+cat("using logical indexing", Z[Z > 4])
 
 # modifying vector
 
 X <- c(2, 7, 9, 7, 8, 2)
 
 X[3] <- 1
-X[2] <-9
-cat('subscript operator', X, '\n')
+X[2] <- 9
+cat("subscript operator", X, "\n")
 
-X[X>5] <- 0
-cat('logical indexing', X, '\n')
+X[X > 5] <- 0
+cat("logical indexing", X, "\n")
 
 X <- X[c(3, 2, 1)]
-cat('combine() function', X)
+cat("combine() function", X)
 
 # delete a vector
 
 M <- c(8, 10, 2, 5)
 
 M <- NULL
-cat('output vector', M)
+cat("output vector", M)
 
 # sorting elements of a vector
 
 X <- c(8, 2, 7, 1, 11, 2)
 
 A <- sort(X)
-cat('ascending order', A, '\n')
+cat("ascending order", A, "\n")
 
 B <- sort(X, decreasing = TRUE)
-cat('descending order', B)
+cat("descending order", B)
 
-# append operation on vectors in r 
+# append operation on vectors in r
 
 x <- 1:5
 n <- 6:10
@@ -2205,8 +2204,8 @@ print(x)
 
 library(geometry)
 
-a = 5
-b = 7
+a <- 5
+b <- 7
 
 print(dot(a, b, d = TRUE))
 
@@ -2214,8 +2213,8 @@ print(dot(a, b, d = TRUE))
 
 library(geometry)
 
-a = 3 + 1i
-b = 7 + 6i
+a <- 3 + 1i
+b <- 7 + 6i
 
 print(dot(a, b, d = TRUE))
 
@@ -2245,7 +2244,7 @@ print(typeof(v1))
 
 # charecter vector
 
-v1 <- c('geeks', '2', 'hello')
+v1 <- c("geeks", "2", "hello")
 
 print(v1)
 
@@ -2253,7 +2252,7 @@ print(typeof(v1))
 
 # complex vector
 
-v1 <- c(1+2i, 3i, 4-5i, -12+6i)
+v1 <- c(1 + 2i, 3i, 4 - 5i, -12 + 6i)
 
 print(v1)
 
@@ -2275,7 +2274,7 @@ print(typeof(l1))
 
 # assigning of vector
 
-V = c(1, 2, 4, 6, 7)
+V <- c(1, 2, 4, 6, 7)
 
 print(V)
 
@@ -2283,13 +2282,13 @@ print(typeof(V))
 
 # assigning a vector using ":"
 
-V = 1:10
+V <- 1:10
 
 print(V)
 
 # assigning vector with seq()
 
-V = seq(1, 3, by=0.2)
+V <- seq(1, 3, by = 0.2)
 
 print(V)
 
@@ -2303,11 +2302,10 @@ length(y)
 
 # getting the length of the matrix
 
-A = matrix(
-  c(1, 2, 3, 4, 5, 6, 7, 8 ,9),
+A <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
   nrow = 3,
-  ncol = 3, 
-  
+  ncol = 3,
   byrow = TRUE
 )
 print(A)
@@ -2320,13 +2318,13 @@ length(BOD)
 
 # getting the length of the list
 
-empId = c(1, 2, 3, 4)
+empId <- c(1, 2, 3, 4)
 
-empName = c("Debi", "Sandeep", "Subham", "Shiba")
+empName <- c("Debi", "Sandeep", "Subham", "Shiba")
 
-numberOfEmp = 4
+numberOfEmp <- 4
 
-empList = list(empId, empName, numberOfEmp)
+empList <- list(empId, empName, numberOfEmp)
 
 print(empList)
 
@@ -2388,11 +2386,11 @@ range(x, na.rn = TRUE, finite = TRUE)
 
 # string formatting in r
 
-result1 <- format("GFG", width = 8,  justify = "l")
+result1 <- format("GFG", width = 8, justify = "l")
 
-result2 <- format("GFG", width = 8,  justify = "c")
+result2 <- format("GFG", width = 8, justify = "c")
 
-result3 <- format("GFG", width = 8,  justify = "r")
+result3 <- format("GFG", width = 8, justify = "r")
 
 print(result1)
 print(result2)
@@ -2400,13 +2398,13 @@ print(result3)
 
 # number format in r
 
-result1 < - format(12.3456789, digits=4)
-result2 < - format(12.3456789, digits=6)
+result1 < -format(12.3456789, digits = 4)
+result2 < -format(12.3456789, digits = 6)
 print(result1)
 print(result2)
 
-result3 < - format(12.3456789, nsmall=2)
-result3 < - format(12.3456789, nsmall=7)
+result3 < -format(12.3456789, nsmall = 2)
+result3 < -format(12.3456789, nsmall = 7)
 print(result3)
 print(result4)
 
@@ -2414,7 +2412,7 @@ print(result4)
 
 x <- c("GFG", "gfg", "Geeks")
 
-x 
+x
 
 y <- replace(x, 2, "GeeksforGeeks")
 
@@ -2435,13 +2433,884 @@ toString(x)
 
 substring("Geeks", 2, 3)
 substring("Geeks", 1, 4)
-substring("GFG", 1,1)
+substring("GFG", 1, 1)
 substring("gfg", 3, 3)
 
 # example 2
 
-x < - c("GFG", "gfg", "Geeks")
+x < -c("GFG", "gfg", "Geeks")
 
 substring(x, 2, 3)
 substring(x, 1, 3)
 substring(x, 2, 2)
+
+
+# list
+# ---------------
+
+
+# creatin a list
+
+empId <- c(1, 2, 3, 4)
+
+empName <- c("Debi", "Sandeep", "Subham", "Shiba")
+
+numberOfEmp <- 4
+
+empList <- list(emId, empName, numberOfEmp)
+
+print(empList)
+
+# accessing components of list
+
+empId <- c(1, 2, 3, 4)
+empName <- c("Debi", "Sandeep", "Subham", "Shiba")
+numberOfEmp <- 4
+empList <- list(
+  "ID" = empId,
+  "Names" = empName,
+  "Total Staff" = numberOfEmp
+)
+print(empList)
+
+cat("Accessin name components using $ command\n")
+print(empList$Names)
+
+# access components by indices
+
+empId <- c(1, 2, 3, 4)
+empName <- c("Debi", "Sandeep", "Subham", "Shiba")
+empList <- list(
+  "ID" = empId,
+  "Name" = empName,
+  "Total Staff" = numberOfEmp
+)
+print(empList)
+
+cat("Accesing name components using indices\n")
+print(empList[[2]])
+
+cat("Accessing Sandeep from naming  using indices\n")
+print(empList[[2]][2])
+
+cat("Accessing 4 from ID usning indices\n")
+print(empList[[1]][4])
+
+# modifying comonents of a list
+
+empId <- c(1, 2, 3, 4)
+empName <- c("Debi", "Sandeep", "Subham", "Shiba")
+numberOfEmp <- 4
+empList <- list(
+  "ID" = empId,
+  "Name" = empName,
+  "Total Staff" = numberOfEmp
+)
+cat("Before modifying the list\n")
+print(empList)
+
+empList$`Total Staff` <- 5
+
+empList[[1]][5] <- 5
+empList[[2]][5] <- "Kamala"
+
+cat("After modified the list\n")
+print(empList)
+
+# concatenation of list
+
+empId <- c(1, 2, 3, 4)
+empName <- c("Debi", "Sandeep", "Subham", "Shiba")
+numberOfEmp <- 4
+empList <- list(
+  "ID" = empId,
+  "Name" = empName,
+  "Total Stuff" = numberOfEmp
+)
+cat("Before concatenation of the new list\n")
+print(empList)
+
+empAge <- c(34, 23, 18, 45)
+empAgeList <- list(
+  "Age" = empAge
+)
+
+empList <- c(empList, empAgeList)
+
+cat("After concatenation of the new list\n")
+print(empList)
+
+# deleting components of a list
+
+empId <- c(1, 2, 3, 4)
+empName <- c("Debi", "Sandeep", "Subham", "Shiba")
+numberOfEmp <- 4
+empList <- lsit(
+  "ID" = empId,
+  "Names" = empName,
+  "Total Staff" = numberOfEmp
+)
+cat("Befor deletion the list is\n")
+print(empList)
+
+cat("After Deleting Total staff components\n")
+print(empList[-3])
+
+cat("After Deleting sandeep from name\n")
+print(empList[[2]][-2])
+
+# merging list
+
+lst1 <- list(1, 2, 3)
+lst2 <- list("Sun", "Mon", "Tue")
+
+new_list <- c(lst1, lst2)
+print(new_list)
+
+# converting list to vector
+
+lst <- list(1:5)
+print(lst)
+
+vec <- unlist(lst)
+print(vec)
+
+# r list matrix
+
+lst1 <- list(
+  list(1, 2, 3),
+  list(4, 5, 6)
+)
+
+cat("The list is :\n")
+print(lst1)
+cat("Class;", class(lst1), "\n")
+
+mat <- matrix(unlist(lst1), nrow = 2, byrow = TRUE)
+
+cat("\nAfter conersion to matrix:\n")
+print(mat)
+cat("Class:", class(mat), "\n")
+
+# accessed by [[]]
+
+list1 <- list(c(1:5), "hi", 0 + 5i)
+list2 <- list(c(6:8))
+
+list_data <- list(list1, list2)
+print("The two-dimensional list is : ")
+print(list_data)
+
+cat(
+  "Lenght of nested list is : ",
+  length(list_data)
+)
+cat(
+  "length of first inner list is : ",
+  length(list_data[[1]])
+)
+
+# accessing nested list
+
+list1 <- list(c(2:5), "hi", 0 + 5i)
+list2 <- list(c(6:8))
+
+list_data <- list(list1, list2)
+
+for (i in c(1:length(list_data)))
+{
+  for (j in c(1:length(list_data)))
+  {
+    cat("List", i, "element", j, ": ")
+    print(list_data[[i]][[j]])
+  }
+}
+
+# deleting or upgrating
+
+list1 <- list(c(1:5), "hi", 0 + 5i)
+list2 <- list(c(6:8))
+
+list_data <- list(list1, list2)
+print("The original list is : ")
+print(list_data)
+
+list_data[[1]][[3]] <- "you"
+print("Modification 1")
+print(list_data)
+
+list_data[[2]] <- list(c(0:3))
+print("Modifiction 2")
+print(list_data)
+
+# deletion of lists
+
+list1 <- list(c(1:5), "hi", 0 + 5i)
+list2 <- list(c(6:8))
+
+list_data <- list(list1, list2)
+print("The original list is : ")
+print(list_data)
+
+list_data[[1]][[3]] <- NULL
+print("Modification 1")
+print(list_data)
+
+list_data[[1]][[3]] <- NULL
+print("Modification 2")
+print(list_data)
+
+# creating list
+
+Geek_list <- list("Geek", "RList", c(65, 21, 80), TRUE, 27.02, 10.3)
+print(Geek_list)
+
+# naming the elements of a list
+
+Geek_list <- list(
+  c("Geeks", "For", "Geeks"),
+  matrix(c(1:9), nrow = 3),
+  list("Geek", 12.3)
+)
+
+names(Geek_list) <- c(
+  "This_is_a_vector",
+  "This_is_a_Matrix",
+  "This_is_a_listwithin_the_list"
+)
+print(Geek_list)
+
+# accessing elements of a list
+
+Geek_list <- list(
+  c("Geeks", "For", "Geeks"),
+  matrix(c(1:9), nrow = 3),
+  list("Geek", 12.3)
+)
+
+names(Geek_list) <- c(
+  "This_is_a_vector",
+  "This_is_a_Matrix",
+  "This_is_a_listwithin_the_list"
+)
+
+print(Geek_list[1])
+
+print(Geek_list[3])
+
+print(Geek_list$This_is_a_Matrix)
+
+# adding, deleting, and updating elements of a list
+
+Geek_list <- list(
+  c("Geeks", "For", "Geeks"),
+  matrix(c(1:9), nrow = 3),
+  list("Geek", 12.3)
+)
+
+Geek_list[4] <- "New element"
+print(Geek_list)
+
+Geek_list[4] <- NULL
+
+print(Geek_list[4])
+
+Geek_list[3] <- "updated element"
+print(Geek_list[3])
+
+# merging elements of a list
+
+list1 <- list(1, 2, 3, 4, 5, 6, 7)
+list2 <- list("Geeks", "For", "Geeks")
+
+merged_list <- c(list1, list2)
+print(merged_list)
+
+# converting a list to vector
+
+list1 <- list(1:5)
+print(list1)
+list2 <- list(11:15)
+print(list2)
+
+v1 <- unlist(list1)
+v2 <- unlist(list2)
+print(v1)
+print(v2)
+
+result_vector <- v1 + v2
+print(result_vector)
+
+# creating a list of daraframe
+
+df1 <- data.frame(
+  y1 = c(1, 2, 3),
+  y2 = c(4, 5, 6)
+)
+
+df2 <- data.frame(
+  y1 = c(7, 8, 9),
+  y2 = c(1, 4, 6)
+)
+
+listOfDataframe <- list(df1, df2)
+print(listOfDataframe)
+
+# access components of a list dataframe
+
+df1 <- data.frame(
+  y1 = c(1, 2, 3),
+  y2 = c(4, 5, 6)
+)
+
+df2 <- data.frame(
+  y1 = c(7, 8, 9),
+  y2 = c(1, 4, 6)
+)
+
+listOfDataframe <- list(
+  "Dataframe1" = df1,
+  "Dataframe2" = df2
+)
+print(listOfDataframe)
+
+cat("Accessing Dataframe2 using $ command\n")
+print(listOfDataframe$Dataframe2)
+
+# access components by indices
+
+df1 <- data.frame(
+  y1 = c(1, 2, 3),
+  y2 = c(4, 5, 6)
+)
+
+df2 <- data.frame(
+  y1 = c(7, 8, 9),
+  y2 = c(1, 4, 6)
+)
+
+listOfDataframe <- list(
+  "Dataframe1" = df1,
+  "Dataframe2" = df2
+)
+print(listOfDataframe)
+
+cat("Accessing Dataframe2 using indices\n")
+print(listOfDataframe[[2]])
+
+cat("Accessing second column from Dataframe1 using indices\n")
+print(listOfDataframe[[1]][[2]])
+
+cat("Accessing 4 from Dataframe2 using indices\n")
+print(listOfDataframe[[2]][2, 2])
+
+# modifying components of a list of dataframe
+
+df1 <- data.frame(
+  y1 = c(1, 2, 3),
+  y2 = c(4, 5, 6)
+)
+
+df2 <- data.frame(
+  y1 = c(7, 8, 9),
+  y2 = c(4, 5, 6)
+)
+
+listOfDataframe <- list(
+  "Dataframe1" = df1,
+  "Dataframe2" = df2
+)
+cat("Before modefying the list of data frame\n")
+print(listOfDataframe)
+
+listOfDataframe$Dataframe2 <- data.frame(
+  y1 = c(70, 80, 9),
+  y2 = c(14, 41, 63)
+)
+
+listOfDataframe[[1]][2] <- c(23, 45, 67)
+listOfDataframe[[1]][2, 1] <- 15
+
+cat("After modified the list of data frame\n")
+print(listOfDataframe)
+
+# concatenation of lists of dataframe
+
+df1 <- data.frame(
+  y1 = c(1, 2, 3),
+  y2 = c(4, 5, 6)
+)
+
+df2 <- data.frame(
+  y1 = c(7, 8, 9),
+  y2 = c(1, 4, 6)
+)
+
+listOfDataframe <- list(
+  "Dataframe1" = df1,
+  "Dataframe2" = df2
+)
+cat("Before concatenation of the new list of data frame\n")
+print(listOfDataframe)
+
+df3 <- data.frame <- list(
+  y1 = c(7, 8, 98),
+  y2 = c(10, 44, 6)
+)
+newListOfDataframe <- lsit(
+  "Dataframe3" = df3
+)
+
+listOfDataframe <- c(listOfDataframe, newListOfDataframe)
+
+cat("After concatenation of the new list of data frame\n")
+print(listOfDataframe)
+
+# deleting components from a list of dataframe
+
+df1 <- data.frame(
+  y1 = c(1, 2, 3),
+  y2 = c(4, 5, 6)
+)
+
+df2 <- data.frame(
+  y1 = c(7, 8, 9),
+  y2 = c(1, 4, 6)
+)
+
+listOfDataframe <- list(
+  "Dataframe1" = df1,
+  "Dataframe2" = df2
+)
+
+cat("Befor deletion the list is\n")
+print(listOfDataframe)
+
+cat("After deleting Dataframe1\n")
+print(listOfDataframe[[-1]])
+
+cat("After Deleting forst column from Dataframe2\n")
+print(listOfDataframe[[2]][-1])
+
+# creating a named list
+
+x <- list(
+  mt = matrix(1:6, nrow = 2),
+  lt = letters[1:8],
+  n = c(1:10)
+)
+
+cat("Whole List:\n")
+print(x)
+
+# accessing components of named list
+
+x <- list(
+  mt = matrix(1:6, nrow = 2),
+  lt = letters[1:8],
+  n = c(1:10)
+)
+
+cat("Element named 'mt' :\n")
+print(x$mt)
+cat("\n")
+
+cat("Element named 'n':\n")
+print(x$n)
+
+# modifying components of named list
+
+lt <- list(
+  a = 1,
+  let = letters[1:8],
+  mt = matrix(1:6, nrow = 2)
+)
+
+cat("List before modifying:\n")
+print(lt)
+
+lt$a <- 5
+
+cat("List after modifying:\n")
+print(lt)
+
+# deleting components from named list
+
+lt <- list(
+  a = 1,
+  let = letters[1:8],
+  mt = matrix(1:6, nrow = 2)
+)
+
+cat("List before deleting:\n")
+print(lt)
+
+lt <- within(lt, rm(a))
+
+cat("List after deleting:\n")
+print(lt)
+
+# is.list()function in r
+
+a <- list(1, 2, 3)
+b <- list(c("Jan", "Feb", "Mar"))
+c <- list(matrix(c(1, 2, 3, 4, 5)))
+d <- list(list("green", 12.3))
+
+is.list(a)
+is.list(b)
+is.list(c)
+is.list(d)
+
+# as.list() function
+
+x < -c(1, 2, 3, 4, 5)
+as.list(x)
+
+# exists() function
+
+exists("cos")
+exists("diff")
+exists("Hello")
+
+# lapply () function
+
+A <- matrix(1:9, 3, 3)
+B <- matrix(10:18, 3, 3)
+myList <- list(A, B)
+determinant <- lapply(myList, det)
+print(determinant)
+
+# mapply() function
+
+A <- list(c(1, 2, 3, 4))
+B <- list(c(2, 5, 1, 6))
+
+result <- mapply(sum, A, B)
+print(result)
+
+# arrays
+
+vec1 <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+print (vec)
+cat ("Length of vector :", length(vec1))
+
+# multi-dimensional array
+
+arr = array(2:13, dim = c(2, 3, 2))
+print(arr)
+
+# vector of a different length can also be fed as input the array
+
+vec1 <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+vec2 <- c(10, 11, 12)
+
+arr = array(c(vec1, vec2), dim = c(2, 3, 2))
+print (arr)
+
+# naming of arrays
+
+row_names <- c("row1", "row2")
+col_names <- c("col1", "col2", "col3")
+mat_names <- c("Mat1", "Mat2")
+
+arr = array(2:14, dim = c(2, 3, 2),
+            dimnames = list(row_names,
+                            col_names, mat_names))
+print(arr)
+
+# accessing arrays
+
+vec <- c(1:10)
+
+cat("Vector is : ", vec)
+cat("Third element of vrctor is : ", vec[3])
+
+# accessing entire matrices
+
+vec1 <- c(1, 2, 3, 4, 5, 6, 7, 8,9)
+vec2 <- c(10, 11, 12)
+row_names <- c("row1", "row2")
+col_names <- c("col1", "col2", "col3")
+mat_names <- c("Mat1", "Mat2")
+arr = array(c(vec1, vec2), dim = c(2, 3, 2),
+            dimnames = list(row_names,
+                            col_names, mat_names))
+
+print ("Matrix 1")
+print (arr[,,1])
+
+print ("Matrix 2")
+print(arr["Mat2"])
+
+# accessing specific rows and columns of matrices
+
+vec1 <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+vec2 <- c(10, 11, 12)
+row_names <- c("row1", "row2")
+mat_names <- c("Mat1", "Mat2")
+arr = array(c(vec1, vec2), dim = c(2, 3, 2),
+            dimnames = list(row_names,
+                            col_names, mat_names))
+
+print ("1st colum of matrix 1")
+print (arr[, 1, 1])
+
+print ("2nd row of matrix 2")
+print(arr["row2",,"Mat2"])
+
+# accessing elements individually
+
+vec1 <- c(1, 2, 3, 4, 5, 6, 7 ,8 ,9)
+vec2 <- c(10, 11, 12)
+row_names <- c("row1", "row2")
+col_names <- c("col1", "col2", "col3")
+mat_names <- c("Mat1", "Mat2")
+arr = array(c(vec1, vec2), dim = c(2, 3, 2),
+            dimnames = list(row_names, col_names, mat_names))
+
+print ("2nd row 3rd column matrix 1 element")
+print (arr[2, "col3", 1])
+
+print ("2nd row 3rd column element of matrix 2")
+print(arr["row2", "col1", "Mat2"])
+
+# accessing subset of array elements
+
+row_names <- c("row1", "row2")
+col_names <- c("col1", "col2", "col3", "col4")
+mat_names <- c("Mat1", "Mat2")
+arr = array(1:15, dim = c(2, 4, 2),
+            dimnames = list(row_names, col_names, mat_names))
+print (arr[, c(2, 3), 1])
+
+# adding elements to array
+
+x <- c(1, 2, 3, 4, 5)
+
+x <- c(x, 6)
+print ("Array¸ after 1st modifiction ")
+print (x)
+
+x <- append(x, 7)
+print ("Array after 2nd modification ")
+print (x)
+
+len <- length(x)
+x[len + 1] <- 8
+print ("Array after 3rd modification ")
+print (x)
+
+x[len + 3]<-9
+print ("Array after 4th modification ")
+print(x)
+
+print ("Array after 5th modification ")
+x <- append(x, c(10, 11, 12), after = length(x)+3)
+print (x)
+
+print ("Array after 6th modification")
+x <- append(x, c(-1, -1), after = 3)
+print(x)
+
+# removing elements from array
+
+m <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+print ("Origin Array")
+print(m)
+
+m <- m[m != 3]
+print ("After 1st modification")
+print(m)
+
+m <- m[m>2 & m<= 8]
+print ("After 2nd modification")
+print(m)
+
+print(m % in % remove)
+print("After 3rd modification")
+print(m[! m % in % remove])
+
+# updating existing elements of array
+
+m <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+print("Original Array")
+print(m)
+
+m[1] <- 0
+print("After 1st modification")
+print(m)
+
+m[7:9] <- -1
+print("After 2rd modification")
+print(m)
+
+m[c(2, 5)] <- c(-1, -2)
+print("After 3rd modification")
+print(m)
+
+m[10] <- 10
+print("After 4th modification")
+print(m)
+
+# creating a multidimentional array
+
+vector1 <- c(5, 9, 3)
+vector2 <- c(10, 11, 12, 13, 14, 15)
+
+result <- array(c(vector1, vector2), dim = c(3, 3, 2))
+print(result)
+
+# naming columns and rows
+
+vector1 <- c(5, 9, 3)
+vector2 <- c(10, 11, 12, 13, 14, 15)
+column.names <- c("COL1", "COL2", "COL3")
+row.names <- c("Matrix1", "Matrix2")
+matrix.names <- c("Matrix1", "Matrix2")
+
+result <- array(c(vector1, vector2), dim = c(3, 3, 2),
+                dimnames = list(row.names, column.names,
+                                matrix.names))
+print(result)
+
+# manipulating array elements
+
+vector1 <- c(5, 9, 3)
+vector2 <- c(10, 11, 12, 13, 14, 15)
+
+array1 <- array(c(vector1, vector2), dim = c(3, 3, 2))
+
+vector3 <- c(9, 1, 0)
+vector4 <- c(6, 0, 11, 3, 14, 1, 2, 6, 9)
+array2 <- array(c(vector1, vector2), dim = c(3, 3, 2))
+
+matrix1 <- array[,,2]
+matrix2 <- array[,,2]
+
+result <- matrix1 + matrix2
+print(result)
+
+
+# array operation-where
+
+vector1 <- c(1, 2, 3)
+vector2 <- c(10, 15, 3, 11, 16, 12)
+
+result <-array(c(vector1, vector2), dim = c(3, 3, 2))
+print(result)
+
+# naming columns and rows
+
+vector1 <- c(1, 2, 3)
+vector2 <- c(10, 15, 3, 11, 16, 12)
+
+column.names <- c("COLUMN1", "COLUMN2", "COLUMN3")
+row.names <- c("ROW1", "ROW2", "ROW3")
+matrix.name <- c("Matrix.NO1", "Matrix.NO2")
+
+result <- array(c(vector1, vector2), dim = c(3, 3, 2),
+                dimnames = list(row.names, matrix.names))
+print(result)
+
+# manipulaing array elements
+
+vector1 <- c(1, 2, 3)
+vector2 <- c(4, 6, 8, 0, 2, 4)
+array1 <- array(c(vector3, vector4), dim = c(3, 3, 2))
+
+matrix1 <- array1[,,2]
+matrix2 <- array2[,,2]
+result <- matrix1 + matrix2
+print(result)
+
+# accessing array elements
+
+vector1 <- c(1, 2, 3)
+vetor2  <- c(10, 15, 3, 11, 16, 12)
+column.names <- c("COLUMN1", "COLUMN2", "COLUMN3")
+row.names <- c("ROW1", "ROW2", "ROW3")
+matrix.names <- c("Matrix.NO1", "Matrix.NO2")
+
+result <- array(c(vector1, vector2), dim = c(3, 3, 2),
+                dimnames = list(row.names, column.names, matrix.names))
+print(result[3,,2])
+
+# sorthing arrays-sort function
+
+arr <- c(9, 8, 7, 7, 6, 5, 4 ,3 ,2 ,1)
+sort(arr)
+
+# sorting function 
+
+df <- data.frame("Age" = c(12, 21, 15, 5, 25),
+                 "Name" = c("Johnny", "Glen", "Alfie",
+                            "Jack", "Finch"))
+newdf <- df[order(df$Age),]
+print(newdf)
+
+# sortning array- loop
+
+arr <- c(9, 4, 5, 4, 5, 6, 3, 2, 1)
+
+repeat
+{
+  swap = FALSE
+  
+  for (i in 2:length(arr))
+  {
+    newArr <- arr
+    if (arr[i - 1] > arr[i])
+    {
+      newArr[i -1] <- arr[i]
+      newArr[i] <- arr[i - 1]
+      arr <- newArr
+      swapped <- TRUE
+    }
+  }
+  if (!swapped) {break}
+}
+print(arr)
+
+# sorting array using dplayr 
+
+install.packages("dplyr")
+library(dplyr)
+
+df <-data.frame("Age" = c(12, 21, 15, 5, 25),
+                "Name" = c("Johnny", "Glen", "Alfie",
+                           "Jack", "Finch"))
+arrange(df, age)
+
+# as.logical 
+
+x <- c(1, 2, 3, 0, 1.4, NA)
+
+as.logical(T)
+as.logical("F")
+as.logical(2)
+as.logical(x)
+
+# outter function
+
+x <- c(1, 2, 3, 4, 5)
+y<- c(2, 4, 6)
+
+outer(x, y)
+
+# intersection function
+
+x1 <- c(1, 2, 3, 4, 5, 6, 5, 5)
+
+x2 <- c(2:4)
+
+x3 <- intersection(x1, x2)
+
+print(x3)
+
+# setdiff function
+
+x1 <- c(1, 2, 3, 4, 5, 6, 5, 5)
+x2 <- c(2:4)
+x3 <- setdiff(x1, x2)
+print(x3)
