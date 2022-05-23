@@ -3075,7 +3075,7 @@ print(x3)
 
 # setdiff function
 
-x1 <- c(1, 2, 3, 4, 5, 6, 5, 5)
+x1 <- c(1, 2, 3, 4, 5, 6, 5, 5) 
 x2 <- c(2:4)
 x3 <- setdiff(x1, x2)
 print(x3)
@@ -3764,3 +3764,128 @@ x <- matrix(rep(2:10), 3, 3)
 print(x)
 
 rowSums(x)
+
+
+# Factor
+# --------------
+
+
+# creating a factor in r program
+
+x < -c("female", "male", "male", "female")
+print(x)
+
+gender < -factor(x)
+print(gender)
+
+# checking for a factor in r
+
+gender <- factor(c("female", "male", "male", "female"))
+print(is.factor(gender))
+
+# function class()
+
+gender <- factor(c("female", "male", "male", "female"))
+class(gender)
+
+# accessing elements of a factor in r
+
+gender <- factor(c("female", "male", "male", "female"))
+gender[3]
+
+# more than on
+
+gender <- factor(c("female", "male", "male", "female"))
+gender[c(2, 4)]
+
+# modification of a factor in r
+
+gender <- factor(c("female", "male", "male", "female"))
+gender[2] <- "female"
+gender
+
+# factor in data frame
+
+age <- c(40, 49, 48, 40, 67, 52, 53)
+salary <- c(
+  103200, 106200, 150200,
+  10606, 10390, 14070, 10220
+)
+gender <- c(
+  "male", "male", "transgender",
+  "female", "male", "female", "transgender"
+)
+employee <- data.frame(age, salary, gender)
+print(employee)
+print(is.factor(employee$gender))
+
+# ordering of factor
+
+x < -c(
+  "Pen", "Pencil", "Brush", "Pen",
+  "Brush", "Brush", "Pencil", "Pencil"
+)
+
+print(x)
+print(is.factor(x))
+
+factor_x <- factor(x)
+levels(factor_x)
+
+# ordering factor levels
+
+size <- c(
+  "small", "large", "large", "small",
+  "medium", "large", "medium", "medium"
+)
+
+size_factor <- factor(size)
+print(size_factor)
+
+ordered.size <- factor(size, levels = c(
+  "small", "medium", "large"
+), ordered = TRUE)
+print(ordered.size)
+
+# convert factor to numeric and numeric to factor in r
+
+V <- c("Notrh", "South", "East", "East")
+
+drn <- factor(V)
+
+as.numeric(drn)
+
+# converting a factor that is a number
+
+soap_cost <- factor(c(29, 28, 210, 28, 29))
+
+as.numeric(as.character(soap_cost))
+
+# is.ordered
+
+x <- c("female", "male", "male", "female")
+
+gender <- factor(x)
+
+is.ordered(gender)
+
+# as.ordered
+
+x <- c("North", "North", "East", "West")
+
+Directions <- factor(x)
+
+as.ordered(Directions)
+
+# is.factor
+
+x <- c("female", "male", "male", "female")
+
+gender <- factor(x)
+
+is.factor(gender)
+
+# as.factor
+
+x <- c("female", "male", "male", "female")
+as.factor(x)
