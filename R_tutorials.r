@@ -2720,3 +2720,363 @@ B <- list(c(2, 5, 1, 6))
 result <- mapply(sum, A, B)
 print(result)
 
+
+# Arrays
+# -------------
+
+vec1 <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+print(vec)
+cat("Length of vector :", length(vec1))
+
+# multi-dimensional array
+
+arr <- array(2:13, dim = c(2, 3, 2))
+print(arr)
+
+# vector of a different length can also be fed as input the array
+
+vec1 <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+vec2 <- c(10, 11, 12)
+
+arr <- array(c(vec1, vec2), dim = c(2, 3, 2))
+print(arr)
+
+# naming of arrays
+
+row_names <- c("row1", "row2")
+col_names <- c("col1", "col2", "col3")
+mat_names <- c("Mat1", "Mat2")
+
+arr <- array(2:14,
+             dim = c(2, 3, 2),
+             dimnames = list(
+               row_names,
+               col_names, mat_names
+             )
+)
+print(arr)
+
+# accessing arrays
+
+vec <- c(1:10)
+
+cat("Vector is : ", vec)
+cat("Third element of vrctor is : ", vec[3])
+
+# accessing entire matrices
+
+vec1 <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+vec2 <- c(10, 11, 12)
+row_names <- c("row1", "row2")
+col_names <- c("col1", "col2", "col3")
+mat_names <- c("Mat1", "Mat2")
+arr <- array(c(vec1, vec2),
+             dim = c(2, 3, 2),
+             dimnames = list(
+               row_names,
+               col_names, mat_names
+             )
+)
+
+print("Matrix 1")
+print(arr[, , 1])
+
+print("Matrix 2")
+print(arr["Mat2"])
+
+# accessing specific rows and columns of matrices
+
+vec1 <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+vec2 <- c(10, 11, 12)
+row_names <- c("row1", "row2")
+mat_names <- c("Mat1", "Mat2")
+arr <- array(c(vec1, vec2),
+             dim = c(2, 3, 2),
+             dimnames = list(
+               row_names,
+               col_names, mat_names
+             )
+)
+
+print("1st colum of matrix 1")
+print(arr[, 1, 1])
+
+print("2nd row of matrix 2")
+print(arr["row2", , "Mat2"])
+
+# accessing elements individually
+
+vec1 <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+vec2 <- c(10, 11, 12)
+row_names <- c("row1", "row2")
+col_names <- c("col1", "col2", "col3")
+mat_names <- c("Mat1", "Mat2")
+arr <- array(c(vec1, vec2),
+             dim = c(2, 3, 2),
+             dimnames = list(row_names, col_names, mat_names)
+)
+
+print("2nd row 3rd column matrix 1 element")
+print(arr[2, "col3", 1])
+
+print("2nd row 3rd column element of matrix 2")
+print(arr["row2", "col1", "Mat2"])
+
+# accessing subset of array elements
+
+row_names <- c("row1", "row2")
+col_names <- c("col1", "col2", "col3", "col4")
+mat_names <- c("Mat1", "Mat2")
+arr <- array(1:15,
+             dim = c(2, 4, 2),
+             dimnames = list(row_names, col_names, mat_names)
+)
+print(arr[, c(2, 3), 1])
+
+# adding elements to array
+
+x <- c(1, 2, 3, 4, 5)
+
+x <- c(x, 6)
+print("Array¸ after 1st modifiction ")
+print(x)
+
+x <- append(x, 7)
+print("Array after 2nd modification ")
+print(x)
+
+len <- length(x)
+x[len + 1] <- 8
+print("Array after 3rd modification ")
+print(x)
+
+x[len + 3] <- 9
+print("Array after 4th modification ")
+print(x)
+
+print("Array after 5th modification ")
+x <- append(x, c(10, 11, 12), after = length(x) + 3)
+print(x)
+
+print("Array after 6th modification")
+x <- append(x, c(-1, -1), after = 3)
+print(x)
+
+# removing elements from array
+
+m <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+print("Origin Array")
+print(m)
+
+m <- m[m != 3]
+print("After 1st modification")
+print(m)
+
+m <- m[m > 2 & m <= 8]
+print("After 2nd modification")
+print(m)
+
+print(m % in % remove)
+print("After 3rd modification")
+print(m[!m % in % remove])
+
+# updating existing elements of array
+
+m <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+print("Original Array")
+print(m)
+
+m[1] <- 0
+print("After 1st modification")
+print(m)
+
+m[7:9] <- -1
+print("After 2rd modification")
+print(m)
+
+m[c(2, 5)] <- c(-1, -2)
+print("After 3rd modification")
+print(m)
+
+m[10] <- 10
+print("After 4th modification")
+print(m)
+
+# creating a multidimentional array
+
+vector1 <- c(5, 9, 3)
+vector2 <- c(10, 11, 12, 13, 14, 15)
+
+result <- array(c(vector1, vector2), dim = c(3, 3, 2))
+print(result)
+
+# naming columns and rows
+
+vector1 <- c(5, 9, 3)
+vector2 <- c(10, 11, 12, 13, 14, 15)
+column.names <- c("COL1", "COL2", "COL3")
+row.names <- c("Matrix1", "Matrix2")
+matrix.names <- c("Matrix1", "Matrix2")
+
+result <- array(c(vector1, vector2),
+                dim = c(3, 3, 2),
+                dimnames = list(
+                  row.names, column.names,
+                  matrix.names
+                )
+)
+print(result)
+
+# manipulating array elements
+
+vector1 <- c(5, 9, 3)
+vector2 <- c(10, 11, 12, 13, 14, 15)
+
+array1 <- array(c(vector1, vector2), dim = c(3, 3, 2))
+
+vector3 <- c(9, 1, 0)
+vector4 <- c(6, 0, 11, 3, 14, 1, 2, 6, 9)
+array2 <- array(c(vector1, vector2), dim = c(3, 3, 2))
+
+matrix1 <- array[, , 2]
+matrix2 <- array[, , 2]
+
+result <- matrix1 + matrix2
+print(result)
+
+
+# array operation-where
+
+vector1 <- c(1, 2, 3)
+vector2 <- c(10, 15, 3, 11, 16, 12)
+
+result <- array(c(vector1, vector2), dim = c(3, 3, 2))
+print(result)
+
+# naming columns and rows
+
+vector1 <- c(1, 2, 3)
+vector2 <- c(10, 15, 3, 11, 16, 12)
+
+column.names <- c("COLUMN1", "COLUMN2", "COLUMN3")
+row.names <- c("ROW1", "ROW2", "ROW3")
+matrix.name <- c("Matrix.NO1", "Matrix.NO2")
+
+result <- array(c(vector1, vector2),
+                dim = c(3, 3, 2),
+                dimnames = list(row.names, matrix.names)
+)
+print(result)
+
+# manipulaing array elements
+
+vector1 <- c(1, 2, 3)
+vector2 <- c(4, 6, 8, 0, 2, 4)
+array1 <- array(c(vector3, vector4), dim = c(3, 3, 2))
+
+matrix1 <- array1[, , 2]
+matrix2 <- array2[, , 2]
+result <- matrix1 + matrix2
+print(result)
+
+# accessing array elements
+
+vector1 <- c(1, 2, 3)
+vetor2 <- c(10, 15, 3, 11, 16, 12)
+column.names <- c("COLUMN1", "COLUMN2", "COLUMN3")
+row.names <- c("ROW1", "ROW2", "ROW3")
+matrix.names <- c("Matrix.NO1", "Matrix.NO2")
+
+result <- array(c(vector1, vector2),
+                dim = c(3, 3, 2),
+                dimnames = list(row.names, column.names, matrix.names)
+)
+print(result[3, , 2])
+
+# sorthing arrays-sort function
+
+arr <- c(9, 8, 7, 7, 6, 5, 4, 3, 2, 1)
+sort(arr)
+
+# sorting function
+
+df <- data.frame(
+  "Age" = c(12, 21, 15, 5, 25),
+  "Name" = c(
+    "Johnny", "Glen", "Alfie",
+    "Jack", "Finch"
+  )
+)
+newdf <- df[order(df$Age), ]
+print(newdf)
+
+# sortning array- loop
+
+arr <- c(9, 4, 5, 4, 5, 6, 3, 2, 1)
+
+repeat{
+  swap <- FALSE
+  
+  for (i in 2:length(arr))
+  {
+    newArr <- arr
+    if (arr[i - 1] > arr[i]) {
+      newArr[i - 1] <- arr[i]
+      newArr[i] <- arr[i - 1]
+      arr <- newArr
+      swapped <- TRUE
+    }
+  }
+  if (!swapped) {
+    break
+  }
+}
+print(arr)
+
+# sorting array using dplayr
+
+install.packages("dplyr")
+library(dplyr)
+
+df <- data.frame(
+  "Age" = c(12, 21, 15, 5, 25),
+  "Name" = c(
+    "Johnny", "Glen", "Alfie",
+    "Jack", "Finch"
+  )
+)
+arrange(df, age)
+
+# as.logical
+
+x <- c(1, 2, 3, 0, 1.4, NA)
+
+as.logical(T)
+as.logical("F")
+as.logical(2)
+as.logical(x)
+
+# outter function
+
+x <- c(1, 2, 3, 4, 5)
+y <- c(2, 4, 6)
+
+outer(x, y)
+
+# intersection function
+
+x1 <- c(1, 2, 3, 4, 5, 6, 5, 5)
+
+x2 <- c(2:4)
+
+x3 <- intersection(x1, x2)
+
+print(x3)
+
+# setdiff function
+
+x1 <- c(1, 2, 3, 4, 5, 6, 5, 5)
+x2 <- c(2:4)
+x3 <- setdiff(x1, x2)
+print(x3)
+
