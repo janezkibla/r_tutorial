@@ -2175,3 +2175,548 @@ substring(x, 2, 3)
 substring(x, 1, 3)
 substring(x, 2, 2)
 
+
+# list
+# ---------------
+
+
+# creatin a list
+
+empId <- c(1, 2, 3, 4)
+
+empName <- c("Debi", "Sandeep", "Subham", "Shiba")
+
+numberOfEmp <- 4
+
+empList <- list(emId, empName, numberOfEmp)
+
+print(empList)
+
+# accessing components of list
+
+empId <- c(1, 2, 3, 4)
+empName <- c("Debi", "Sandeep", "Subham", "Shiba")
+numberOfEmp <- 4
+empList <- list(
+  "ID" = empId,
+  "Names" = empName,
+  "Total Staff" = numberOfEmp
+)
+print(empList)
+
+cat("Accessin name components using $ command\n")
+print(empList$Names)
+
+# access components by indices
+
+empId <- c(1, 2, 3, 4)
+empName <- c("Debi", "Sandeep", "Subham", "Shiba")
+empList <- list(
+  "ID" = empId,
+  "Name" = empName,
+  "Total Staff" = numberOfEmp
+)
+print(empList)
+
+cat("Accesing name components using indices\n")
+print(empList[[2]])
+
+cat("Accessing Sandeep from naming  using indices\n")
+print(empList[[2]][2])
+
+cat("Accessing 4 from ID usning indices\n")
+print(empList[[1]][4])
+
+# modifying comonents of a list
+
+empId <- c(1, 2, 3, 4)
+empName <- c("Debi", "Sandeep", "Subham", "Shiba")
+numberOfEmp <- 4
+empList <- list(
+  "ID" = empId,
+  "Name" = empName,
+  "Total Staff" = numberOfEmp
+)
+cat("Before modifying the list\n")
+print(empList)
+
+empList$`Total Staff` <- 5
+
+empList[[1]][5] <- 5
+empList[[2]][5] <- "Kamala"
+
+cat("After modified the list\n")
+print(empList)
+
+# concatenation of list
+
+empId <- c(1, 2, 3, 4)
+empName <- c("Debi", "Sandeep", "Subham", "Shiba")
+numberOfEmp <- 4
+empList <- list(
+  "ID" = empId,
+  "Name" = empName,
+  "Total Stuff" = numberOfEmp
+)
+cat("Before concatenation of the new list\n")
+print(empList)
+
+empAge <- c(34, 23, 18, 45)
+empAgeList <- list(
+  "Age" = empAge
+)
+
+empList <- c(empList, empAgeList)
+
+cat("After concatenation of the new list\n")
+print(empList)
+
+# deleting components of a list
+
+empId <- c(1, 2, 3, 4)
+empName <- c("Debi", "Sandeep", "Subham", "Shiba")
+numberOfEmp <- 4
+empList <- lsit(
+  "ID" = empId,
+  "Names" = empName,
+  "Total Staff" = numberOfEmp
+)
+cat("Befor deletion the list is\n")
+print(empList)
+
+cat("After Deleting Total staff components\n")
+print(empList[-3])
+
+cat("After Deleting sandeep from name\n")
+print(empList[[2]][-2])
+
+# merging list
+
+lst1 <- list(1, 2, 3)
+lst2 <- list("Sun", "Mon", "Tue")
+
+new_list <- c(lst1, lst2)
+print(new_list)
+
+# converting list to vector
+
+lst <- list(1:5)
+print(lst)
+
+vec <- unlist(lst)
+print(vec)
+
+# r list matrix
+
+lst1 <- list(
+  list(1, 2, 3),
+  list(4, 5, 6)
+)
+
+cat("The list is :\n")
+print(lst1)
+cat("Class;", class(lst1), "\n")
+
+mat <- matrix(unlist(lst1), nrow = 2, byrow = TRUE)
+
+cat("\nAfter conersion to matrix:\n")
+print(mat)
+cat("Class:", class(mat), "\n")
+
+# accessed by [[]]
+
+list1 <- list(c(1:5), "hi", 0 + 5i)
+list2 <- list(c(6:8))
+
+list_data <- list(list1, list2)
+print("The two-dimensional list is : ")
+print(list_data)
+
+cat(
+  "Lenght of nested list is : ",
+  length(list_data)
+)
+cat(
+  "length of first inner list is : ",
+  length(list_data[[1]])
+)
+
+# accessing nested list
+
+list1 <- list(c(2:5), "hi", 0 + 5i)
+list2 <- list(c(6:8))
+
+list_data <- list(list1, list2)
+
+for (i in c(1:length(list_data)))
+{
+  for (j in c(1:length(list_data)))
+  {
+    cat("List", i, "element", j, ": ")
+    print(list_data[[i]][[j]])
+  }
+}
+
+# deleting or upgrating
+
+list1 <- list(c(1:5), "hi", 0 + 5i)
+list2 <- list(c(6:8))
+
+list_data <- list(list1, list2)
+print("The original list is : ")
+print(list_data)
+
+list_data[[1]][[3]] <- "you"
+print("Modification 1")
+print(list_data)
+
+list_data[[2]] <- list(c(0:3))
+print("Modifiction 2")
+print(list_data)
+
+# deletion of lists
+
+list1 <- list(c(1:5), "hi", 0 + 5i)
+list2 <- list(c(6:8))
+
+list_data <- list(list1, list2)
+print("The original list is : ")
+print(list_data)
+
+list_data[[1]][[3]] <- NULL
+print("Modification 1")
+print(list_data)
+
+list_data[[1]][[3]] <- NULL
+print("Modification 2")
+print(list_data)
+
+# creating list
+
+Geek_list <- list("Geek", "RList", c(65, 21, 80), TRUE, 27.02, 10.3)
+print(Geek_list)
+
+# naming the elements of a list
+
+Geek_list <- list(
+  c("Geeks", "For", "Geeks"),
+  matrix(c(1:9), nrow = 3),
+  list("Geek", 12.3)
+)
+
+names(Geek_list) <- c(
+  "This_is_a_vector",
+  "This_is_a_Matrix",
+  "This_is_a_listwithin_the_list"
+)
+print(Geek_list)
+
+# accessing elements of a list
+
+Geek_list <- list(
+  c("Geeks", "For", "Geeks"),
+  matrix(c(1:9), nrow = 3),
+  list("Geek", 12.3)
+)
+
+names(Geek_list) <- c(
+  "This_is_a_vector",
+  "This_is_a_Matrix",
+  "This_is_a_listwithin_the_list"
+)
+
+print(Geek_list[1])
+
+print(Geek_list[3])
+
+print(Geek_list$This_is_a_Matrix)
+
+# adding, deleting, and updating elements of a list
+
+Geek_list <- list(
+  c("Geeks", "For", "Geeks"),
+  matrix(c(1:9), nrow = 3),
+  list("Geek", 12.3)
+)
+
+Geek_list[4] <- "New element"
+print(Geek_list)
+
+Geek_list[4] <- NULL
+
+print(Geek_list[4])
+
+Geek_list[3] <- "updated element"
+print(Geek_list[3])
+
+# merging elements of a list
+
+list1 <- list(1, 2, 3, 4, 5, 6, 7)
+list2 <- list("Geeks", "For", "Geeks")
+
+merged_list <- c(list1, list2)
+print(merged_list)
+
+# converting a list to vector
+
+list1 <- list(1:5)
+print(list1)
+list2 <- list(11:15)
+print(list2)
+
+v1 <- unlist(list1)
+v2 <- unlist(list2)
+print(v1)
+print(v2)
+
+result_vector <- v1 + v2
+print(result_vector)
+
+# creating a list of daraframe
+
+df1 <- data.frame(
+  y1 = c(1, 2, 3),
+  y2 = c(4, 5, 6)
+)
+
+df2 <- data.frame(
+  y1 = c(7, 8, 9),
+  y2 = c(1, 4, 6)
+)
+
+listOfDataframe <- list(df1, df2)
+print(listOfDataframe)
+
+# access components of a list dataframe
+
+df1 <- data.frame(
+  y1 = c(1, 2, 3),
+  y2 = c(4, 5, 6)
+)
+
+df2 <- data.frame(
+  y1 = c(7, 8, 9),
+  y2 = c(1, 4, 6)
+)
+
+listOfDataframe <- list(
+  "Dataframe1" = df1,
+  "Dataframe2" = df2
+)
+print(listOfDataframe)
+
+cat("Accessing Dataframe2 using $ command\n")
+print(listOfDataframe$Dataframe2)
+
+# access components by indices
+
+df1 <- data.frame(
+  y1 = c(1, 2, 3),
+  y2 = c(4, 5, 6)
+)
+
+df2 <- data.frame(
+  y1 = c(7, 8, 9),
+  y2 = c(1, 4, 6)
+)
+
+listOfDataframe <- list(
+  "Dataframe1" = df1,
+  "Dataframe2" = df2
+)
+print(listOfDataframe)
+
+cat("Accessing Dataframe2 using indices\n")
+print(listOfDataframe[[2]])
+
+cat("Accessing second column from Dataframe1 using indices\n")
+print(listOfDataframe[[1]][[2]])
+
+cat("Accessing 4 from Dataframe2 using indices\n")
+print(listOfDataframe[[2]][2, 2])
+
+# modifying components of a list of dataframe
+
+df1 <- data.frame(
+  y1 = c(1, 2, 3),
+  y2 = c(4, 5, 6)
+)
+
+df2 <- data.frame(
+  y1 = c(7, 8, 9),
+  y2 = c(4, 5, 6)
+)
+
+listOfDataframe <- list(
+  "Dataframe1" = df1,
+  "Dataframe2" = df2
+)
+cat("Before modefying the list of data frame\n")
+print(listOfDataframe)
+
+listOfDataframe$Dataframe2 <- data.frame(
+  y1 = c(70, 80, 9),
+  y2 = c(14, 41, 63)
+)
+
+listOfDataframe[[1]][2] <- c(23, 45, 67)
+listOfDataframe[[1]][2, 1] <- 15
+
+cat("After modified the list of data frame\n")
+print(listOfDataframe)
+
+# concatenation of lists of dataframe
+
+df1 <- data.frame(
+  y1 = c(1, 2, 3),
+  y2 = c(4, 5, 6)
+)
+
+df2 <- data.frame(
+  y1 = c(7, 8, 9),
+  y2 = c(1, 4, 6)
+)
+
+listOfDataframe <- list(
+  "Dataframe1" = df1,
+  "Dataframe2" = df2
+)
+cat("Before concatenation of the new list of data frame\n")
+print(listOfDataframe)
+
+df3 <- data.frame <- list(
+  y1 = c(7, 8, 98),
+  y2 = c(10, 44, 6)
+)
+newListOfDataframe <- lsit(
+  "Dataframe3" = df3
+)
+
+listOfDataframe <- c(listOfDataframe, newListOfDataframe)
+
+cat("After concatenation of the new list of data frame\n")
+print(listOfDataframe)
+
+# deleting components from a list of dataframe
+
+df1 <- data.frame(
+  y1 = c(1, 2, 3),
+  y2 = c(4, 5, 6)
+)
+
+df2 <- data.frame(
+  y1 = c(7, 8, 9),
+  y2 = c(1, 4, 6)
+)
+
+listOfDataframe <- list(
+  "Dataframe1" = df1,
+  "Dataframe2" = df2
+)
+
+cat("Befor deletion the list is\n")
+print(listOfDataframe)
+
+cat("After deleting Dataframe1\n")
+print(listOfDataframe[[-1]])
+
+cat("After Deleting forst column from Dataframe2\n")
+print(listOfDataframe[[2]][-1])
+
+# creating a named list
+
+x <- list(
+  mt = matrix(1:6, nrow = 2),
+  lt = letters[1:8],
+  n = c(1:10)
+)
+
+cat("Whole List:\n")
+print(x)
+
+# accessing components of named list
+
+x <- list(
+  mt = matrix(1:6, nrow = 2),
+  lt = letters[1:8],
+  n = c(1:10)
+)
+
+cat("Element named 'mt' :\n")
+print(x$mt)
+cat("\n")
+
+cat("Element named 'n':\n")
+print(x$n)
+
+# modifying components of named list
+
+lt <- list(
+  a = 1,
+  let = letters[1:8],
+  mt = matrix(1:6, nrow = 2)
+)
+
+cat("List before modifying:\n")
+print(lt)
+
+lt$a <- 5
+
+cat("List after modifying:\n")
+print(lt)
+
+# deleting components from named list
+
+lt <- list(
+  a = 1,
+  let = letters[1:8],
+  mt = matrix(1:6, nrow = 2)
+)
+
+cat("List before deleting:\n")
+print(lt)
+
+lt <- within(lt, rm(a))
+
+cat("List after deleting:\n")
+print(lt)
+
+# is.list()function in r
+
+a <- list(1, 2, 3)
+b <- list(c("Jan", "Feb", "Mar"))
+c <- list(matrix(c(1, 2, 3, 4, 5)))
+d <- list(list("green", 12.3))
+
+is.list(a)
+is.list(b)
+is.list(c)
+is.list(d)
+
+# as.list() function
+
+x < -c(1, 2, 3, 4, 5)
+as.list(x)
+
+# exists() function
+
+exists("cos")
+exists("diff")
+exists("Hello")
+
+# lapply () function
+
+A <- matrix(1:9, 3, 3)
+B <- matrix(10:18, 3, 3)
+myList <- list(A, B)
+determinant <- lapply(myList, det)
+print(determinant)
+
+# mapply() function
+
+A <- list(c(1, 2, 3, 4))
+B <- list(c(2, 5, 1, 6))
+
+result <- mapply(sum, A, B)
+print(result)
+
