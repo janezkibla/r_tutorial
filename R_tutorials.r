@@ -3080,3 +3080,687 @@ x2 <- c(2:4)
 x3 <- setdiff(x1, x2)
 print(x3)
 
+
+# Matrix
+# ----------
+
+
+# creating matrix
+
+A <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+
+rownames(A) <- c("a", "b", "c")
+colnames(A) <- c("c", "d", "e")
+cat("The 3x3 matrix:\n")
+print((A))
+
+# creating special matrix
+
+print(matrix(5, 3, 3))
+
+# diagonal matrix
+
+print(diag(c(5, 3, 3), 3, 3))
+
+# identity matrix
+
+print(diag(1, 3, 3))
+
+# matrix metrics
+
+A <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The 3x3 matrix:\n")
+print(A)
+
+cat("Dimension of the matrix:\n")
+print(dim(A))
+
+cat("Number of rows:\n")
+print(nrow(A))
+
+cat("Number of columns:\n")
+print(ncol(A))
+
+cat("Number of elements:\n")
+print(length(A))
+print(prod(dim(A)))
+
+# accessing elements of matrix
+
+A <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The 3x3 matrix:\n")
+print(A)
+
+cat("Accessing first and second row\n")
+print(A[1:2, ])
+
+# accessing columns
+
+A <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The 3x3 matrix:\n")
+print(A)
+
+cat("Accessing first and second column\n")
+print(A[, 1:2])
+
+# accessing elements of matrix
+
+A <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The 3x3 matrix:\n")
+print(A)
+
+print(A[1, 2])
+print(A[2, 3])
+
+# accessing submatrices
+
+A <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The 3x3 matrix:\n")
+print(A)
+
+cat("Accessing the first three rows aand the first two columns\n")
+print(A[1:3, 1:2])
+
+# modifying elements of matrix
+
+A <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The 3x3 matrix:\n")
+print(A)
+
+A[3, 3] <- 30
+
+cat("After edited the matrix\n")
+print(A)
+
+# matrix concatenatio
+
+A <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The 3x3 matrix:\n")
+print(A)
+
+B <- matrix(
+  c(10, 11, 12),
+  nrow = 1,
+  ncol = 3
+)
+cat("The 1x3 matrix:\n")
+print(B)
+
+C <- rbind(A, B)
+
+cat("After concatenation of a row:\n")
+print(C)
+
+# concatenation of a column
+
+A <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The 3x3 matrix:\n")
+print(A)
+
+B <- matrix(
+  c(10, 11, 12),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The 3x1 matrix:\n")
+print(B)
+
+C <- cbind(A, B)
+cat("After concatenation of a column:\n")
+
+# dimension inconsistency
+
+A <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The 3x3 matrix:\n")
+print(A)
+
+B <- matrix(
+  c(10, 11, 12),
+  nrow = 1,
+  ncol = 3,
+)
+cat("The 1x3 matrix:\n")
+print(B)
+
+C <- cbind(A, B)
+cat("After concatenation of a column:\n")
+print(C)
+
+# deleting rows and columns of a matrix
+
+A <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("Befor deleting the 2nd row/n")
+print(A)
+
+A <- A[-2, ]
+
+cat("After deleted the 2nd row\n")
+print(A)
+
+# column deletion
+
+A <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("Before deleting the 2nd colun\n")
+print(A)
+
+A <- A[, -2]
+cat("After deleted the 2nd column\n")
+print(A)
+
+# matrix where
+
+x <- c(5:16)
+
+rown <- c("row_1", "row_2", "row_3")
+coln <- c("col_1", "col_2", "col_3", "col_4")
+
+m <- matrix(x,
+            nrow = 3, byrow = TRUE,
+            dimnames = list(rown, coln)
+)
+
+print(m)
+class(m)
+
+# matrices addition
+
+B <- matrix(c(1, 2, 3, 4, 5, 6), nrow = 2, ncol = 3)
+
+C <- matrix(c(7, 8, 9, 10, 11, 12), nrow = 2, ncol = 3)
+
+num_of_rows <- nrow(B)
+num_of_cols <- ncol(B)
+
+sum <- matrix(, nrow = num_of_rows, ncol = num_of_cols)
+
+print(B)
+print(C)
+
+# usin + operatoe for matrix addition
+
+B <- matrix(c(1, 2 + 3i, 5.4, 3, 4, 5), nrow = 2, ncol = 3)
+
+C <- matrix(c(2, 0i, 0.1, 3, 4, 5), nrow = 2, ncol = 3)
+
+print(B + C)
+
+# matrices substraction
+
+B <- matrix(c(1, 2, 3, 4, 5, 6), nrow = 2, ncol = 3)
+
+C <- matrix(c(7, 8, 9, 10, 11, 12), nrow = 2, ncol = 3)
+
+num_of_rows <- nrow(B)
+num_of_cols <- ncol(B)
+
+diff <- matrix(, nrow = num_of_rows, ncol = num_of_cols)
+
+print(B)
+print(C)
+
+for (row in 1:num_of_rows)
+{
+  for (col in 1:num_of_cols)
+  {
+    diff[row, col] <- B[row, col] - C[row, col]
+  }
+}
+print(diff)
+
+# using - operator for matrix subtraction
+
+B <- matrix(c(1, 2 + 3i, 5.4, 3, 4, 5), nrow = 2, ncol = 3)
+
+C <- matrix(c(2, 0i, 0.1, 3, 4, 5), nrow = 2, ncol = 3)
+
+print(B - C)
+
+# Matrices multiplication
+
+B <- matrix(c(1, 2, 3, 4, 5, 6), nrow = 2, ncol = 3)
+C <- matrix(c(7, 8, 9, 10, 11, 12), nrow = 2, ncol = 3)
+
+num_of_rows <- nrow(B)
+num_of_cols <- ncol(B)
+
+prod <- matrix(, nrow = num_of_rows, ncol = num_of_cols)
+
+print(B)
+print(C)
+
+for (row in 1:num_of_rows)
+{
+  for (col in 1:num_of_cols)
+  {
+    prod[row, col] <- B[row, col] * C[row, col]
+  }
+}
+print(prod)
+
+# using * operation for matrix
+
+B <- matrix(c(1, 2 + 3i, 5.4), nrow = 1, ncol = 3)
+
+C <- matrix(c(2, 1i, 0.1), nrow = 1, ncol = 3)
+
+print(B * C)
+
+# matrices division
+
+B <- matrix(c(1, 2, 3, 4, 5, 6), nrow = 2, ncol = 3)
+C <- matrix(c(7, 8, 9, 10, 11, 12), nrow = 2, ncol = 3)
+num_of_rows <- nrow(B)
+num_of_cols <- ncol(B)
+
+div <- matrix(, nrow = num_of_rows, ncol = num_of_cols)
+
+print(B)
+print(C)
+
+for (row in 1:num_of_rows)
+{
+  for (col in 1:num_of_rows)
+  {
+    div[row, col] <- B[row, col] / C[row, col]
+  }
+}
+print(div)
+
+# using / operator for matrix
+
+B <- matrix(c(4, 6i, -1), nrow = 1, ncol = 3)
+
+C <- matrix(c(2, 2i, 0), nrow = 1, ncol = 3)
+
+print(B / C)
+
+# multiplication of matrices
+
+m <- matrix(1:8, nrow = 2)
+m <- 2 * m
+print(m)
+
+# multiplication between matrices
+
+m <- matrix(1:8, nrow = 2)
+n <- matrix(8:15, nrow = 2)
+print(m * n)
+
+# multiplication with vector
+
+m <- matrix(1:8, nrow = 2)
+
+vec <- 1:2
+
+print(vec * m)
+
+# multiplication using %*% operator
+
+m <- matrix(1:8, nrow = 2)
+n <- matrix(8:15, nrow = 4)
+
+print(m %*% n)
+
+# operation  on a single matrix
+
+a <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The 3x3 matrix:\n")
+print(a)
+
+cat("Adding 1 to every element:\n")
+print(a - 3)
+
+cat("Subtracting 3 from each element:\n")
+print(a * 10)
+
+cat("Squaring each element:\n")
+print(a^2)
+
+cat("Double each element of original matrix:\n")
+print(a * 2)
+
+# unary operations
+
+a <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The 3x3 matrix:\n")
+print(a)
+
+cat("Large element is:\n")
+print(max(a))
+
+cat("Smallest element is:\n")
+print(min(a))
+
+cat("Sum of elements is:\n")
+print(sum(a))
+
+# binary operation
+
+a <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The 3x3 matrix:\n")
+print(a)
+
+b <- matrix(
+  c(1, 2, 5, 4, 6, 2, 9, 4, 3),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The another 3x3 matrix:\n")
+print(b)
+
+cat("Matrix addition:\n")
+print(a + b)
+
+cat("Matrix substraction:\n")
+print(a - b)
+
+cat("Matrix element wise multiplicatron:\n")
+print(a * b)
+
+cat("Regular Matrix multiplication:\n")
+print(a %*% b)
+
+cat("Matrix elementwise division:\n")
+print(a / b)
+
+# linear algebraic
+
+library(pracma)
+library(psych)
+
+A <- matrix(
+  c(6, 1, 1, 4, -2, 5, 2, 8, 7),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The 3x3 matrix:\n")
+print(A)
+
+cat("Rank of A:\n")
+print(tr(A))
+
+cat("Determinant of A:\n")
+print(t(A))
+
+cat("Thranspose of A:\n")
+print(t(A))
+
+cat("Inverse of A:\n")
+print(inv(A))
+
+# nullity of a matrix
+
+library(pracma)
+
+a <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The 3x3 matrix:\n")
+print(a)
+
+col <- ncol(a)
+
+rank <- Rank(a)
+
+nullity <- col - rank
+
+cat("Nullity of matrix is:\n")
+print(nullity)
+
+# elgenvalues and eigenvectors of matrices
+
+A <- matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9),
+  nrow = 3,
+  ncol = 3,
+  byrow = TRUE
+)
+cat("The 3x3 matrix:\n")
+print(A)
+
+print(eigen(A))
+
+# solve a liner matrix equation
+
+library(MASS)
+
+A <- matrix(
+  c(1, 2, 3, 4),
+  nrow = 2,
+  ncol = 2,
+  byrow = TRUE
+)
+cat("A = :\n")
+print(A)
+
+b <- matrix(
+  c(7, 10),
+  nrow = 2,
+  ncol = 1,
+)
+cat("b = :\n")
+print(b)
+
+cat("Solution of linear equations:\n")
+print(solve(A) %*% b)
+
+cat("Solution of linear equations using pseudoinverse:\n")
+print(ginv(A) %*% b)
+
+# column wise combination
+
+B <- matrix(c(1, 2), nrow = 1, ncol = 2)
+C <- matrix(c(3, 4, 5), nrow = 1, ncol = 3)
+
+print(B)
+print(C)
+
+print(cbind(B, C))
+
+# row wise combination
+
+B <- matrix(c(1, 2, 3), nrow = 1, ncol = 3)
+
+C <- matrix(c(4, 5, 6, 7, 8, 9), nrow = 2, ncol = 3)
+
+print(B)
+print(C)
+print(rbind(B, C))
+
+# finding the transpose by using the t() function
+
+M <- matrix(1:6, nrow = 2)
+
+print(M)
+
+t <- t(M)
+
+print(t)
+
+# by iterating over each value using loops
+
+Matrix <- matrix(1:9, nrow = 3)
+
+print(Matrix)
+
+M2 <- Matrix
+
+for (i in 1:nrow(M2))
+{
+  for (j in 1:ncol(M2))
+  {
+    M2[i, j] <- Matrix[j, i]
+  }
+}
+print(M2)
+
+# using the solve() function
+
+a1 <- c(3, 2, 5)
+a2 <- c(2, 3, 2)
+a3 <- c(5, 2, 4)
+
+A <- rbind(a1, a2, a3)
+print(A)
+
+T1 <- solve(A)
+print(T1)
+
+# finding determinant of matrix
+
+a1 <- c(3, 2, 8)
+a2 <- c(6, 3, 2)
+a3 <- c(5, 2, 4)
+
+A <- rbind(a1, a2, a3)
+print(det(A))
+
+# matrix library
+
+library("Mareix")
+
+mat1 <- Matrix(0,
+               nrow = 1000,
+               ncol = 1000,
+               sparse = TRUE
+)
+mat1[1][1] <- 5
+
+print("Size of sparse mat1")
+print(object.size(mat1))
+
+# multiplication or division by scaler
+
+set.seed(0)
+rows <- 4L
+cols <- 6L
+vals <- sample(
+  x = c(0, 10),
+  prob = c(0, 10),
+  size = rows * cols,
+  replace = TRUE
+)
+dense_mat <- matrix(vals, nrow = rows)
+
+sparse_mat <- as(dense_mat, "sparseMatrix")
+print("Sparse Matrix")
+print(sparse_mat)
+print("Multiplication")
+
+print(sparse_mat * 10)
+print("Division")
+
+print(sparse_mat / 10)
+
+# is.matrix
+
+A <- matrix(c(1:5))
+B <- matrix(c(1:12), nrow = 4, byrow = TRUE)
+C <- matrix(c(1:12), nrow = 4, byrow = FALSE)
+
+is.matrix(A)
+is.matrix(B)
+is.matrix(C)
+
+# as.matrix()function
+
+x <- c(1:9)
+as.matrix(x)
+
+# dim()
+BOD
+dim(BOD)
+
+# cumsum()
+
+cumsum(1:4)
+cumsum(-1:-6)
+
+# rowSum()
+
+x <- matrix(rep(2:10), 3, 3)
+
+print(x)
+
+rowSums(x)
