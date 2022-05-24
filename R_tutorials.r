@@ -3889,3 +3889,773 @@ is.factor(gender)
 
 x <- c("female", "male", "male", "female")
 as.factor(x)
+
+
+# DataFrame
+# ----------------------
+
+
+# creating dataframe in r program
+
+friend.data <- data.frame(
+  friend_id = c(1:5),
+  friend_name = c(
+    "Sachin", "Sourav",
+    "Dravid", "Sahwag",
+    "Dhoni"
+  ),
+  stringAsFactor = FALSE
+)
+
+print(friend.data)
+
+# get the structure of the r - dataframe
+
+friend.data <- data.frame(
+  friend_id = c(1:5),
+  friend_name = c(
+    "Sachin", "Sourav",
+    "Dravid", "Sehwag",
+    "Dhoni"
+  ),
+  stringAsFactor = FALSE
+)
+
+print(str(friend.data))
+
+# summary of data in the data frame
+
+friend.data <- data.frame(
+  friend_id = c(1:5),
+  friend_name = c(
+    "Sachin", "Sourav",
+    "Dravid", "Sehwag",
+    "Dhoni"
+  ),
+  stringAsFactor = FALSE
+)
+
+print(summary(friend.data))
+
+# extra data frame in r languege
+
+friend.data <- data.frame(
+  friend_id = c(1:5),
+  friend_name = c(
+    "Sachin", "Sourav",
+    "Dravid", "Sehwag",
+    "Dhoni"
+  ),
+  stringAsFactors = FALSE
+)
+
+result <- data.frame(friend.data$friend_name)
+print(result)
+
+# expand data frame
+
+friend.data <- data.frame(
+  friend_id = c(1:5),
+  friend_name = c(
+    "Sachin", "Sourav",
+    "Dravid", "Sehwag",
+    "Dhoni"
+  ),
+  stringAsFactors = FALSE
+)
+
+friend.data$location <- c(
+  "Kolkata", "Delhi",
+  "Bangalore", "Hyderabad",
+  "Chennai"
+)
+resultant <- friend.data
+print(resultant)
+
+# matrix vs dataframe in r - matrix
+
+A <- matrix(c(11, 22, 33, 44, 55, 66),
+  nrow = 2, ncol = 3, byrow = 1
+)
+print(A)
+
+# matrix vs dataframe in r - dataframe
+
+comp.data <- data.frame(
+  comp_id = c(1:3),
+  comp_name = c("Geeks", "For", "Geeks"),
+  growth = c(16000, 14000, 12000),
+  comp_start_data = as.Date(c("02/05/10", "04/04/10", "05/03/10"))
+)
+print(comp.data)
+
+# creating a dataframe
+
+Name <- c("Amiya", "Raj", "Asish")
+
+Languege <- c("R", "Python", "Java")
+
+Age <- c(22, 25, 45)
+
+df <- data.frame(Name, Languege, Age)
+
+print(df)
+
+# row selection
+
+df <- data.frame(
+  "Name" = c("Amiya", "Raj", "Asish"),
+  "Language" = c("R", "Python", "Java"),
+  "Age" = c(22, 25, 45)
+)
+print(df)
+
+cat("Accessing first and second row\n")
+print(df[1:2, ])
+
+# column selection
+
+df <- data.frame(
+  "Name" = c("Amiya", "Raj", "Asish"),
+  "Language" = c("R", "Python", "Java"),
+  "Age" = c(22, 25, 45)
+)
+print(df)
+
+cat("Accessing first and second column\n")
+print(df[, 1:2])
+
+# selecting the subset of the dataframe
+
+df <- data.frame(
+  "Name" = c("Amiya", "Raj", "Asish"),
+  "Language" = c("R", "Python", "Java"),
+)
+print(df)
+
+newDf <- subset(df, Name == "Amiya" | Age > 30)
+
+cat("After Selecting the subset of the data frame\n")
+print(newDf)
+
+# editing dataframe
+
+df <- data.frame(
+  "Name" = c("Amiya", "Raj", "Asish"),
+  "Language" = c("R", "Python", "Java"),
+  "Age" = c(22, 25, 45)
+)
+cat("Before editing the dataframe\n")
+print(df)
+
+df[3][3] <- 30
+
+cat("After edited the dataframe\n")
+print(df)
+
+# adding extra rows
+
+df <- data.frame(
+  "Name" = c("Amiya", "Ray", "Asish"),
+  "Language" = c("R", "Python", "Java"),
+  "Age" = c(22, 25, 45)
+)
+cat("Before adding row\n")
+print(df)
+
+newDf <- rbind(df, data.frame(
+  Name = "Sandeep",
+  Language = "C",
+  Age = 23
+))
+cat("After Added a row\n")
+print(newDf)
+
+# adding extra columns
+
+df <- data.frame(
+  "Name" = c("Amiya", "Raj", "Asish"),
+  "Language" = c("R", "Python", "Java"),
+  "Age" = c(22, 25, 45)
+)
+cat("Befor adding column\n")
+print(df)
+
+newDf <- cbind(df, Rank = c(3, 5, 1))
+
+cat("After Added a column\n")
+print(newDf)
+
+# adding new variable to dataframe
+
+library(dplyr)
+
+df <- data.frame(
+  "Name" = c("Amiya", "Raj", "Asish"),
+  "Language" = c("R", "Python", "Java"),
+  "Age" = c(22, 25, 45)
+)
+cat("Original Dataframe\n")
+print(df)
+
+newDf <- mutate(df, log_Age = log(Age))
+
+cat("After creating extra variable column\n")
+print(newDf)
+
+# deleting rows and columns from data frame
+
+df <- data.frame(
+  "Name" = c("Amiya", "Raj", "Asish"),
+  "Language" = c("R", "Python", "Java"),
+  "Age" = c(22, 25, 45)
+)
+cat("Before deleting the 3rd row and 2nd column\n")
+print(df)
+
+newDF <- df[-3, -2]
+
+cat("After Deleted the 3rd row and 2nd column\n")
+print(newDF)
+
+# rename() function of the plyr package
+
+df <- library(plyr)
+
+df <- data.frame(row1 = 0:2, row2 = 3:5, row3 = 6:8)
+print("Original Data Frame")
+print(df)
+print("Modified Data Frame")
+
+rename(df, c("row1" = "one", "row2" = "two", "row3" = "three"))
+
+# r's build function : names
+
+df <- data.frame(row1 = 0:2, row2 = 3:5, row3 = 6:8)
+print("Original Data Frame")
+print(df)
+print("Modified Data Frame")
+
+names(df)[names(df) == "row3"] <- "three"
+print(df)
+
+# adding columns to a date frame
+
+df <- data.frame(col1 = 0:2, col2 = 3:5, col3 = 6:8)
+print("Original Data Frame")
+print(df)
+
+df[["col4"]] <- 0
+
+df$"col5" <- NA
+
+df[["col5"]] <- df[["col1"]] + df[["col2"]]
+print("Modified Data Frame")
+print(df)
+
+
+# removing columns from a data frame
+
+df <- data.frame(row1 = 0:2, row2 = 3:5, row3 = 6:8)
+print("Original Data Frame")
+print(df)
+
+df[["row2"]] <- NULL
+print(df)
+
+# subsetting a data frame
+
+df <- data.frame(row1 = 0:2, row2 = 3:5, row3 = 6:8)
+print("Original Data Frame")
+print(df)
+
+df <- subset(df, select = -c(row1, row2))
+print("Modified Data Frame")
+print(df)
+
+# reordering columns
+
+df <- data.frame(row1 = 0.2, row2 = 3:5, row3 = 6:8)
+print("Original Data Frame")
+print(df)
+print("Modified Data Frame")
+
+df[, c(2, 1, 3)]
+
+# basic syntax of merge() function in r
+
+df1 <- data.frame(
+  StudentId = c(101:106),
+  Product = c(
+    "Hindi", "English",
+    "Maths", "Science",
+    "Political Science",
+    "Physics"
+  )
+)
+df1
+
+# natural join or inner join
+
+df <- merge(x = df1, y = df2, by = "StudentId")
+df
+
+# left outer join
+
+df <- merge(
+  x = df1, y = df2, by = "StudentId",
+  all.x = TRUE
+)
+df
+
+# right outer join
+
+df <- merge(
+  x = df1, y = df2, by = "StudentId",
+  all.y = TRUE
+)
+df
+
+# full outer join
+
+df <- merge(
+  x = df1, y = df2, by = "StudentId",
+  all = TRUE
+)
+df
+
+# cross join
+
+df <- merge(x = df1, y = df2, by = NULL)
+df
+
+# semi join
+
+library(dplyr)
+df <- df1 %>% semi_join(df2, by = "StudentId")
+df
+
+# anti join
+
+library(dplyr)
+df <- df1 %>% anti_join(df2, by = "StudentId")
+df
+
+# factor issue in data frame in r
+
+df <- data.frame(
+  "Name" = c("Amiya", "Raj", "Asish"),
+  "language" = c("R", "Python", "Java"),
+  "Age" = c(22, 25, 45)
+)
+print(df)
+
+df[1, 3] <- 37
+df[3, 2] <- "C"
+
+print(df)
+
+# resolving the factor issue
+
+df <- data.frame(
+  "Name" = c("Amiya", "Rej", "Asish"),
+  "Language" = c("R", "Python", "Java"),
+  "Age" = c(22, 25, 45),
+  stringAsFactors = F
+)
+print(df)
+
+df[1, 4] <- 37
+df[3, 2] <- "C"
+
+print(df)
+
+# transpose to matrix
+
+first <- matrix(c(1:12), nrow = 4, byrow = TRUE)
+print("Original Matrix")
+first
+
+first <- t(first)
+print("Transpode of the Matrix")
+first
+
+# joining rows and columns in dataframe - rbind()
+
+name <- c("Shaoni", "esha", "soumitra", "soumi")
+age <- c(24, 53, 62, 29)
+address <- c("puducherry", "kolkate", "delhi", "bangalore")
+
+info <- cbind(name, age, address)
+print("Combining vector into data frame using cbind")
+print(info)
+
+newd <- data.frame(
+  name = c("sounak", "bhabani"),
+  age = c("28", "87"),
+  address = c("bangalore", "kolkate")
+)
+
+new.info <- rbind(info, newd)
+print("Combining data frame using rbind ")
+print(new.info)
+
+# merging two data frame
+
+d1 <- data.frame(
+  name = c("shaoni", "soumi", "arjun"),
+  ID = c("111", "112", "113")
+)
+
+d2 <- data.frame(
+  name = c("sounak", "esha"),
+  ID = c("114", "115")
+)
+
+total <- merge(d1, d2, all = TRUE)
+print(total)
+
+# melting and casting - dcast
+
+library(MASS)
+library(reshape)
+a <- data.frame(
+  id = c("1", "1", "2", "2"),
+  points = c("1", "2", "1", "2"),
+  x1 = c("5", "3", "6", "2"),
+  x2 = c("6", "5", "1", "4")
+)
+
+print("Melting")
+m <- melt(a, id = c("id", "point"))
+print(m)
+
+print("Casting")
+idmn <- dcast(a, id ~ variable, mean)
+print(idmn)
+
+# buildin gdata frame using vector
+
+User.ID <- sprintf("User % d", 1:8)
+Name <- c(
+  "Jhon", "Lee", "Suzan", "Abhinav",
+  "Brain", "Emma", "David", "Alice"
+)
+
+gender <- c(
+  "Male", "Male", "Female", "Male",
+  "Male", "Female", "Male", "Female"
+)
+
+Marks <- c(56, 76, 86, 96, 73, 87, 47, 98)
+
+Number <- c(
+  "111-222", "222-333", "333-444", "444-666",
+  "333-888", "000-888-777", "999-000", "222-456"
+)
+
+class.df <- data.frame(
+  User.ID, Name,
+  gender, Marks, Number
+)
+class.df
+
+# get structure of data frame - str()
+
+User.ID <- sprintf("User % d", 1:8)
+Name <- c(
+  "Jhon", "Lee", "Suzan", "Abhinav",
+  "Brain", "Emma", "David", "Alice"
+)
+
+gender <- c(
+  "Male", "Male", "Female", "Male",
+  "Male", "Female", "Male", "Female"
+)
+
+Marks <- c(56, 76, 86, 96, 73, 87, 47, 98)
+
+Number <- c(
+  "111-222", "222-333", "333-444", "444-666",
+  "333-888", "000-888-777", "999-000", "222-456"
+)
+
+class.df <- data.frame(
+  User.ID, Name,
+  gender, Marks, Number
+)
+str(class.df)
+
+# extra data from data frame
+
+User.ID <- sprintf("User % d", 1:8)
+Name <- c(
+  "Jhon", "Lee", "Suzan", "Abhinav",
+  "Brain", "Emma", "David", "Alice"
+)
+
+gender <- c(
+  "Male", "Male", "Female", "Male",
+  "Male", "Female", "Male", "Female"
+)
+
+Marks <- c(
+  "111-222", "222-333", "3332-444", "444-666",
+  "333-888", "000-888-777", "999-000", "222-456"
+)
+
+Number <- c(
+  "111-222", "222-333", "333-444", "444-666",
+  "333-888", "000-888-777", "999-000", "222-456"
+)
+
+class.df <- data.frame(
+  User.ID, Name,
+  gender, Marks, Number
+)
+extract <- data.frame(
+  class.df$Name,
+  class.df$gender
+)
+print(extract)
+
+# adding rows and columns to data frame
+
+User.ID <- sprintf("User % d", 1:8)
+Name <- c(
+  "Jhon", "Lee", "Suzan", "Abhinav",
+  "Brain", "Emma", "David", "Alice"
+)
+
+gender <- c(
+  "Male", "Male", "Female", "Male",
+  "Male", "Female", "Male", "Female"
+)
+Marks <- c(56, 76, 86, 96, 73, 87, 47, 98)
+
+Number <- c(
+  "111-222", "222-333", "333-444", "444-666",
+  "333-888", "000-888-777", "999-000", "222-456"
+)
+
+class.df <- data.frame(
+  User.ID, Name,
+  gender, Marks, Number
+)
+
+class.df$New.column <- sprintf("new.data % d", 1:8)
+modified.dataframe <- class.df
+print(modified.dataframe)
+
+# adding row
+
+User.ID <- sprintf("User % d", 1:8)
+Name <- c(
+  "Jhon", "Lee", "Suzan", "Abhinav",
+  "Brain", "Emma", "David", "Alice"
+)
+
+gender <- c(
+  "Male", "Male", "Female", "Male",
+  "Male", "Female", "Male", "Female"
+)
+
+Marks <- c(56, 76, 86, 96, 73, 87, 47, 98)
+
+Number <- c(
+  "111-222", "222-333", "333-444", "444-666",
+  "333-888", "000-888-777", "999-000", "222-456"
+)
+
+class.df <- data.frame(
+  User.ID, Name,
+  gender, Marks, Number
+)
+
+User.ID <- sprintf("User % d", 9:12)
+
+Name <- sprintf("new.data % d", 9:12)
+
+gender <- c("Male", "Male", "Female")
+
+Marks <- c(87, 47, 98)
+
+Number <- sprintf("new.number % d", 9:12)
+
+new.data <- data.frame(User.ID, Name, gender, Marks, Number)
+
+final.data <- rbind(class.df, new.data)
+
+print(final.data)
+
+# conversion of wide dataset to long
+
+library(tidyverse)
+
+sample_data <- read.csv("C:/Users/Admin/Desktop/pew.csv")
+
+sample_data
+
+sample_data_long <- gather(sample_data, income, freq, -religion)
+
+sample_data_long
+
+# conveersion to long datasets to wide
+
+library(tidyverse)
+sample_data <- read.csv("C:/User/Admin/Desktop/mexicanweather.csv")
+sample_data_wide <- spread(sample_data, element, value)
+sample_data_wide
+
+# melting and casting in r
+
+install.packages("MASS")
+
+install.package("reshape2")
+install.packages("reshape")
+
+library(MASS)
+library(reshape2)
+library(reshape)
+
+n <- c(1, 1, 2, 2)
+time <- c(1, 2, 1, 2)
+x <- c(6, 3, 2, 5)
+y <- c(1, 4, 6, 9)
+df <- data.frame(n, time, x, y)
+
+cat("Origin data frame:\n")
+print(df)
+
+molten.data <- melt(df, id = c("n", "time"))
+
+cat("\nAfter melting data frame:\n")
+print(molten.data)
+
+# casting in r
+
+cast.data <- cast(molten.data, n ~ variable, sum)
+
+print(cast.data)
+
+cat("\n")
+time.cast <- cast(molten.data, time ~ variable, mean)
+print(time.cast)
+
+# subsetting in r
+
+x <- 1:15
+
+cat("Original vector: ", x, "\n")
+cat("First 5 values of vector:", x[1:5], "\n")
+cat(
+  "Without values present at index 1, 2 and 3: ",
+  x[-c(1, 2, 3)], "\n"
+)
+
+# subsetting in r using [[]] operator
+
+ls <- list(a = 1, b = 2, c = 10, d = 20)
+
+cat("Original List: \n")
+print(ls)
+
+cat("First element of list: ", ls[[1]], "\n")
+
+# subsetting in r using $ operation
+
+ls <- list(a = 1, b = 2, c = "Hello", d = "GFG")
+
+cat("Original list:\n")
+print(ls)
+
+cat("Using $ operator:\n")
+print(ls$d)
+
+# subsetting in r using subset () function
+
+airq <- subset(airquality, Temp < 65,
+  select = c(Month)
+)
+print(airq)
+
+# dealing missing values in r - is.na()function for finding missing values
+
+x <- c(NA, 3, 4, NA, NA, NA)
+is.na(x)
+
+# is.nan()function for dinding missing values
+
+x <- c(NA, 3, 4, NA, NA, 0 / 0, 0 / 0)
+is.nan(x)
+
+# creating of a vector with one or multiple Nas is also possible
+
+x <- c(NA, 3, 4, NA, NA, NA)
+x
+
+# extracting values expect for NA or NaN nalues
+
+x <- c(1, 2, NA, 3, NA, 4)
+d <- is.na(x)
+x[!d]
+
+
+# missing value filter function
+
+df <- data.frame(
+  c1 = 1:8,
+  c2 = factor(c(
+    "B", "A", "B", "C",
+    "A", "C", "B", "A"
+  ))
+)
+
+df[4, 1] <- df[6, 2] <- NA
+
+levels(df$c2)
+na.fail(df)
+na.exclude(a)
+
+# as.data.frame()function
+
+x1 <- c(1, 2, 3, 4)
+x2 <- c("a", "B", "C", "D")
+x3 <- c("hello", "Geeks", "for", "geeks")
+
+x <- list(col1 = x1, col = x2, col2 = x3)
+x
+
+as.data.frame(x)
+
+# ncol() function in r
+
+BOD
+
+ncol(BOD)
+
+# nrow()function in r
+
+BOD
+nrow(BOD)
+
+# sum()functiom in r example
+
+x <- c(10, 20, 30, 40)
+y <- c(1.8, 2.4, 3.9)
+z <- c(0, -2, 4, -6)
+
+sum(x)
+sum(y)
+sum(z)
+sum(x, y, z)
+
+# sunset()function in r
+
+df <- data.frame(row1 = 0.2, row2 = 3:5, row3 = 6:8)
+print("Original Data Frame")
+print(df)
+
+df1 <- subset(df, select = row2)
+print("Modified Data Frame")
+print(df1)
